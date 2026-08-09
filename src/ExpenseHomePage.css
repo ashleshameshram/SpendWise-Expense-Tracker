@@ -1,0 +1,12 @@
+.layout{
+    display:flex;
+    min-height:100vh;
+}
+
+.main-content{
+    flex:1;
+    height: 100vh;
+    background:#F5F7FB;
+    overflow-x: hidden;
+    overflow-y: auto;
+}

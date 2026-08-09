@@ -1,0 +1,98 @@
+.sidebar{
+    width:260px;
+    height: 100vh;
+    background-color: #222674;
+    color:rgb(252, 252, 252);
+    display:flex;
+    font-size: 16px;
+    flex-direction:column;
+    padding:25px 20px;
+    position:sticky;
+    top:0;
+}
+
+/* Logo */
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:20px;
+}
+
+.logo-icon{
+    width:55px;
+    height:55px;
+    border-radius:12px;
+    background:rgba(0, 10, 64, 0.546);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:35px;
+}
+
+.logo h2{
+    margin:0;
+    font-size:32px;
+    font-weight:400;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Navigation */
+
+.sidebar-nav{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.sidebar-link{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    color:white;
+    text-decoration:none;
+    padding:8px 10px;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.sidebar-link:hover{
+    background:rgba(255,255,255,.15);
+    color:white;
+}
+
+.sidebar-link.active{
+    background:rgba(255,255,255,.25);
+}
+
+.sidebar-link i{
+    width:20px;
+    text-align:center;
+}
+
+.sidebar hr{
+    border-color:rgba(255, 248, 248, 0.502);
+    margin:0px 0;
+}
+
+.sidebar-footer{
+    margin-top:auto;
+    height: 280px;
+    background:rgba(255,255,255,.12);
+    border-radius:18px;
+    padding:14px;
+    text-align:left;
+}
+
+.sidebar-footer p{
+    color:white;
+    font-size:16px;
+    line-height:1.3;
+    font-weight:400;
+}
+
+.wallet-image{
+    width:100%;
+    display:block;
+}

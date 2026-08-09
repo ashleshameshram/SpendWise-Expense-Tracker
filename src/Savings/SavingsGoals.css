@@ -1,0 +1,24 @@
+.goals-list{
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 6px;
+}
+
+.goals-list::-webkit-scrollbar{
+    width:5px;
+}
+
+.goals-list::-webkit-scrollbar-track{
+    background:#f1f1f1;
+    border-radius:10px;
+}
+
+.goals-list::-webkit-scrollbar-thumb{
+    margin-left: 10px;
+    background:#004951;
+    border-radius:10px; 
+}
+
+.goals-list::-webkit-scrollbar-thumb:hover{
+    background:rgb(7, 0, 64);
+}
