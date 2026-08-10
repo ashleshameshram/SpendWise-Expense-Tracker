@@ -1,0 +1,296 @@
+.select-icon-wrapper {
+    position: relative;
+}
+.select-overlay-icon {
+    display: none;
+}
+ 
+/* TABLET (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .recent-transactions {
+        margin: 16px !important;
+        padding: 20px !important;
+    }
+    .recent-header h3 {
+        font-size: 20px;
+    }
+    .recent-header .btn {
+        font-size: 13px;
+    }
+    .txn-icon-circle {
+        width: 40px !important;
+        height: 40px !important;
+    }
+    .txn-desc {
+        font-size: 14px;
+    }
+    .txn-meta {
+        font-size: 12px;
+    }
+    .txn-amount {
+        font-size: 14px;
+    }
+}
+ 
+/* ===================== MOBILE (below 768px) ===================== */
+ 
+/* Shared mobile rules: search row single-line + transaction item flexbox fix */
+@media (max-width: 767px) {
+    /* SEARCH ROW — always a single line: search grows, filter/sort are fixed icon squares */
+    .search-transaction-row {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        align-items: center;
+        gap: 8px;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        --bs-gutter-x: 0;
+    }
+    .search-col {
+        flex: 1 1 auto !important;
+        max-width: none !important;
+        min-width: 60px;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .filter-col,
+    .sort-col {
+        flex: 0 0 42px !important;
+        width: 42px !important;
+        max-width: 42px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .select-icon-wrapper {
+        width: 42px;
+        height: 38px;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .select-overlay-icon {
+        display: block;
+        pointer-events: none;
+        font-size: 15px;
+        color: #495057;
+    }
+    .filter-select,
+    .sort-select {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+    }
+ 
+    /* TRANSACTION ITEM — right side never shrinks/wraps, left side truncates instead */
+    .txn-item {
+        flex-wrap: nowrap !important;
+        gap: 8px;
+    }
+    .txn-info {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+    .txn-icon-circle {
+        flex-shrink: 0;
+    }
+    .txn-text {
+        min-width: 0;
+        flex: 1 1 auto;
+        overflow: hidden;
+    }
+    .txn-desc {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+    }
+    .txn-meta-row {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+    }
+    .txn-right {
+        flex: 0 0 auto;
+        white-space: nowrap;
+    }
+}
+ 
+/* LARGE PHONES (480px - 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+    .recent-transactions {
+        margin: 14px !important;
+        padding: 16px !important;
+        border: none !important;
+        border-radius: 16px !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+        background: #ffffff;
+    }
+    .recent-header h3 {
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+    .recent-header .btn {
+        font-size: 12.5px;
+        padding: 6px 14px;
+        border-radius: 8px;
+    }
+    .search-transaction-row {
+        margin-top: 8px;
+    }
+    .search-transaction-row .form-control {
+        border-radius: 10px;
+        font-size: 13.5px;
+        padding: 9px 12px;
+    }
+ 
+    .txn-icon-circle {
+        width: 38px !important;
+        height: 38px !important;
+        font-size: 13px;
+    }
+    .txn-desc {
+        font-size: 13.5px;
+    }
+    .txn-meta {
+        font-size: 11px;
+    }
+    .txn-amount {
+        font-size: 13.5px;
+    }
+    .txn-right {
+        gap: 10px !important;
+    }
+    .txn-actions {
+        font-size: 13px;
+    }
+}
+ 
+/* MEDIUM/SMALL PHONES (300px - 479px) */
+@media (min-width: 300px) and (max-width: 479px) {
+    .recent-transactions {
+        margin: 8px !important;
+        padding: 12px !important;
+        border: none !important;
+        border-radius: 14px !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        background: #ffffff;
+    }
+    .recent-header h3 {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+    .recent-header .btn {
+        font-size: 11.5px;
+        padding: 5px 12px;
+        border-radius: 8px;
+    }
+    .search-transaction-row {
+        margin-top: 6px;
+    }
+    .search-transaction-row .form-control {
+        border-radius: 9px;
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+    .filter-col,
+    .sort-col {
+        flex: 0 0 38px !important;
+        width: 38px !important;
+        max-width: 38px !important;
+    }
+    .select-icon-wrapper {
+        width: 38px;
+        height: 36px;
+    }
+    .select-overlay-icon {
+        font-size: 14px;
+    }
+ 
+    .txn-icon-circle {
+        width: 34px !important;
+        height: 34px !important;
+        font-size: 12px;
+    }
+    .txn-desc {
+        font-size: 12.5px;
+    }
+    .txn-meta {
+        font-size: 10.5px;
+    }
+    .txn-amount {
+        font-size: 12.5px;
+    }
+    .txn-right {
+        gap: 8px !important;
+    }
+    .txn-actions {
+        font-size: 12px;
+    }
+}
+ 
+/* VERY SMALL SCREENS (below 300px) */
+@media (max-width: 299px) {
+    .recent-transactions {
+        margin: 6px !important;
+        padding: 10px !important;
+        border: none !important;
+        border-radius: 12px !important;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+        background: #ffffff;
+    }
+    .recent-header h3 {
+        font-size: 15px;
+    }
+    .recent-header .btn {
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+    .search-transaction-row .form-control {
+        border-radius: 8px;
+        font-size: 11px;
+        padding: 7px 9px;
+    }
+    .filter-col,
+    .sort-col {
+        flex: 0 0 34px !important;
+        width: 34px !important;
+        max-width: 34px !important;
+    }
+    .select-icon-wrapper {
+        width: 34px;
+        height: 34px;
+    }
+    .select-overlay-icon {
+        font-size: 13px;
+    }
+ 
+    .txn-icon-circle {
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 11px;
+    }
+    .txn-desc {
+        font-size: 11.5px;
+    }
+    .txn-meta {
+        font-size: 10px;
+    }
+    .txn-amount {
+        font-size: 11.5px;
+    }
+    .txn-right {
+        gap: 6px !important;
+    }
+    .txn-actions {
+        font-size: 11px;
+    }
+}

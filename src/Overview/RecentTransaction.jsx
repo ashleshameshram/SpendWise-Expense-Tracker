@@ -2,6 +2,7 @@ import { useState } from "react";
 import SearchTransaction from "./SearchTransaction";
 import TransactionList from "./TransactionList";
 import DeleteModal from "../Common/DeleteModal";
+import './RecentTransaction.css'
 
 export default function RecentTransaction({ transactions , onDelete, onEdit}) {
     const [deleteTarget, setDeleteTarget] = useState(null);
