@@ -1,0 +1,130 @@
+/* Desktop (lg, 992px+) uses col-lg-3 as-is — 4 cards per row, untouched. */
+
+/* TABLET (768px - 991px) — 2 cards per row via col-md-6 */
+@media (min-width: 768px) and (max-width: 991px) {
+    .dashboard-row {
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+    }
+    .dashboard-card {
+        padding: 20px !important;
+    }
+    .card-icon-circle {
+        width: 55px !important;
+        height: 55px !important;
+        min-width: 55px !important;
+    }
+    .card-amount-icon {
+        font-size: 18px !important;
+    }
+    .dashboard-card h4 {
+        font-size: 22px;
+    }
+    .dashboard-card h6 {
+        font-size: 13px;
+    }
+}
+
+/* LARGE PHONES (480px - 767px) — 2 cards per row */
+@media (min-width: 480px) and (max-width: 767px) {
+    .dashboard-row {
+        margin-left: 12px !important;
+        margin-right: 12px !important;
+    }
+    .dashboard-card {
+        padding: 18px !important;
+    }
+    .card-icon-circle {
+        width: 46px !important;
+        height: 46px !important;
+        min-width: 46px !important;
+    }
+    .card-amount-icon {
+        font-size: 15px !important;
+    }
+    .dashboard-card h4 {
+        font-size: 18px;
+    }
+    .dashboard-card h6 {
+        font-size: 11px;
+    }
+}
+
+/* MEDIUM PHONES (300px - 479px) — 2 cards per row, tighter fit */
+@media (min-width: 300px) and (max-width: 479px) {
+    .dashboard-row {
+        margin-left: 8px !important;
+        margin-right: 8px !important;
+    }
+    .dashboard-card {
+        padding: 16px !important;
+    }
+    .card-icon-circle {
+        width: 38px !important;
+        height: 38px !important;
+        min-width: 38px !important;
+    }
+    .card-amount-icon {
+        font-size: 12px !important;
+    }
+    .dashboard-card h4 {
+        font-size: 16px;
+    }
+    .dashboard-card h6 {
+        font-size: 10px;
+    }
+}
+
+/* VERY SMALL SCREENS (below 300px) — 1 card per row */
+@media (max-width: 320px) {
+    .dashboard-row .col-6 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    .dashboard-row {
+        margin-left: 6px !important;
+        margin-right: 6px !important;
+    }
+    .dashboard-card {
+        padding: 10px !important;
+    }
+    .card-icon-circle {
+        width: 40px !important;
+        height: 40px !important;
+        min-width: 40px !important;
+    }
+    .card-amount-icon {
+        font-size: 14px !important;
+    }
+    .dashboard-card h4 {
+        font-size: 18px;
+    }
+    .dashboard-card h6 {
+        font-size: 11px;
+    }
+}
+
+/* LAPTOP (992px - 1199px) — 2 cards per row */
+@media (min-width: 992px) and (max-width: 1300px) {
+    .dashboard-row .col-lg-3 {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+    }
+    .dashboard-card {
+        padding: 18px !important;
+    }
+    .card-icon-circle {
+        width: 52px !important;
+        height: 52px !important;
+        min-width: 52px !important;
+    }
+    .card-amount-icon {
+        font-size: 19px !important;
+    }
+    .dashboard-card h4 {
+        font-size: 22px;
+    }
+    .dashboard-card h6 {
+        font-size: 13px;
+    }
+}
