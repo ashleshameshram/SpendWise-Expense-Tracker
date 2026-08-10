@@ -1,0 +1,284 @@
+.saving-progress-container {
+    width: 100%;
+}
+
+.saving-progress-card {
+    width: 100%;
+}
+
+.saving-progress-main {
+    width: 100%;
+}
+
+.saving-progress-left {
+    min-width: 0;
+}
+
+.saving-progress-right {
+    min-width: 0;
+}
+
+.saving-progress-circle {
+    flex-shrink: 0;
+}
+
+.saving-progress-inner-circle {
+    flex-shrink: 0;
+}
+
+@media (max-width: 576px) {
+
+    .saving-progress-container {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        margin-top: 4px !important;
+    }
+
+    .saving-progress-card {
+        padding: 10px !important;
+        border-radius: 12px !important;
+    }
+
+    .saving-progress-heading {
+        display: flex !important;
+        align-items: center !important;
+        gap: 7px !important;
+        margin-bottom: 3px !important;
+    }
+
+    .saving-progress-heading > div {
+        width: 28px !important;
+        height: 28px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .saving-progress-heading i {
+        font-size: 14px !important;
+    }
+
+    .saving-progress-heading h5 {
+        font-size: 12px !important;
+        line-height: 1.2 !important;
+        margin-left: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .saving-progress-main {
+        display: grid !important;
+        grid-template-columns: minmax(0, 62%) minmax(90px, 38%) !important;
+        align-items: center !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .saving-progress-left {
+        width: auto !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        padding: 0 4px 0 0 !important;
+    }
+
+    .saving-progress-amount {
+        display: flex !important;
+        align-items: baseline !important;
+        margin: 2px 0 0 0 !important;
+        height: 32px !important;
+    }
+
+    .saving-progress-amount h1 {
+        font-size: 24px !important;
+        line-height: 1 !important;
+        margin: 0 !important;
+        white-space: nowrap !important;
+    }
+
+    .saving-progress-amount h5 {
+        font-size: 11px !important;
+        line-height: 1 !important;
+        margin: 0 0 0 4px !important;
+        white-space: nowrap !important;
+    }
+
+    .saving-progress-bar {
+        width: 100% !important;
+        height: 7px !important;
+        margin: 5px 0 0 0 !important;
+    }
+
+    .saving-progress-bar .progress-bar {
+        height: 7px !important;
+    }
+
+    .saving-progress-percentage {
+        font-size: 10px !important;
+        line-height: 1.2 !important;
+        margin: 4px 0 5px 2px !important;
+    }
+
+    .saving-progress-remaining {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 7px 8px !important;
+        border-radius: 5px !important;
+        overflow: hidden !important;
+    }
+
+    .saving-progress-remaining p {
+        font-size: 9px !important;
+        line-height: 1.2 !important;
+        margin: 0 !important;
+        white-space: nowrap !important;
+    }
+
+    .saving-progress-right {
+        width: auto !important;
+        min-width: 0 !important;
+        height: 100% !important;
+        min-height: 115px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .saving-progress-circle {
+        width: clamp(88px, 28vw, 112px) !important;
+        height: clamp(88px, 28vw, 112px) !important;
+        flex-shrink: 0 !important;
+    }
+
+    .saving-progress-inner-circle {
+        width: calc(clamp(88px, 28vw, 112px) - 10px) !important;
+        height: calc(clamp(88px, 28vw, 112px) - 10px) !important;
+    }
+
+    .saving-progress-inner-circle h2 {
+        font-size: clamp(15px, 4.5vw, 20px) !important;
+        line-height: 1 !important;
+        margin: 0 !important;
+    }
+
+    .saving-progress-inner-circle p {
+        font-size: 8px !important;
+        line-height: 1 !important;
+        margin: 4px 0 0 0 !important;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .saving-progress-container {
+        padding-left: 6px !important;
+        padding-right: 6px !important;
+    }
+
+    .saving-progress-card {
+        padding: 8px !important;
+    }
+
+    .saving-progress-heading h5 {
+        font-size: 11px !important;
+    }
+
+    .saving-progress-main {
+        grid-template-columns: minmax(0, 64%) minmax(82px, 36%) !important;
+    }
+
+    .saving-progress-amount h1 {
+        font-size: 21px !important;
+    }
+
+    .saving-progress-amount h5 {
+        font-size: 9px !important;
+    }
+
+    .saving-progress-percentage {
+        font-size: 9px !important;
+    }
+
+    .saving-progress-remaining {
+        padding: 6px !important;
+    }
+
+    .saving-progress-remaining p {
+        font-size: 8px !important;
+    }
+
+    .saving-progress-right {
+        min-height: 100px !important;
+    }
+
+    .saving-progress-circle {
+        width: 88px !important;
+        height: 88px !important;
+    }
+
+    .saving-progress-inner-circle {
+        width: 78px !important;
+        height: 78px !important;
+    }
+
+    .saving-progress-inner-circle h2 {
+        font-size: 15px !important;
+    }
+
+    .saving-progress-inner-circle p {
+        font-size: 7px !important;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .saving-progress-container {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+
+    .saving-progress-card {
+        padding: 1.25rem !important;
+    }
+
+    .saving-progress-main {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .saving-progress-left {
+        padding-right: 1rem;
+        margin-top: 1rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .saving-progress-right {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        margin-bottom: 1.5rem !important;
+    }
+
+    .saving-progress-circle {
+        width: 175px !important;
+        height: 175px !important;
+    }
+
+    .saving-progress-inner-circle {
+        width: 155px !important;
+        height: 155px !important;
+    }
+
+    .saving-progress-amount h1 {
+        font-size: 2rem;
+    }
+
+    .saving-progress-amount h5 {
+        font-size: 1rem;
+    }
+
+    .saving-progress-remaining {
+        padding: 0.75rem !important;
+    }
+
+    .saving-progress-heading {
+        margin-bottom: 0.5rem;
+    }
+}

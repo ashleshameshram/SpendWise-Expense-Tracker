@@ -1,5 +1,6 @@
 import React from 'react'
 import SavingsMessage from './SavingsMessage';
+import './SavingProgress.css'
 
 export default function SavingProgress({goals,savings,handleNewGoal}) {
     //calculate progress for every goal
@@ -37,9 +38,9 @@ export default function SavingProgress({goals,savings,handleNewGoal}) {
     const remaining = Math.max(targetAmount - savedAmount, 0);
 
     return(
-        <div className="px-4 mt-1">
-        <div className="bg-white rounded-4 shadow-lg p-3">
-            <div className='d-flex align-items-center'>
+        <div className="px-4 mt-1 saving-progress-container">
+        <div className="bg-white rounded-4 shadow-lg p-3 saving-progress-card">
+            <div className='d-flex align-items-center saving-progress-heading'>
                 <div className="rounded-circle d-flex align-items-center justify-content-center"
                     style={{ width: "40px",height: "40px",backgroundColor: "rgb(221, 217, 253)"}}>
                     <i className="fa-solid fa-bullseye" style={{color: "rgb(12, 0, 119)",fontSize:"20px"}}></i>
@@ -47,24 +48,24 @@ export default function SavingProgress({goals,savings,handleNewGoal}) {
                 <h5 className='ms-3 mb-0'>Overall Savings Progress</h5> 
             </div>
 
-            <div className='row align-items-center'>
+            <div className='row align-items-center saving-progress-main'>
                 {/* left side */}
-                <div className='col-8 mb-5 mt-3'>
-                    <div className='d-flex align-items-center '>
+                <div className='col-8 mb-5 mt-3 saving-progress-left'>
+                    <div className='d-flex align-items-center saving-progress-amount'>
                         <h1 className='ms-2'> ₹{savedAmount.toLocaleString("en-IN")}</h1>
                         <h5 className='ms-2'>/₹{targetAmount.toLocaleString("en-IN")} </h5>
                     </div>
                    
-                    <div className='ms-2 progress rounded-pill' role='progressbar' aria-label="Default striped example" style={{height:"10px"}}>
+                    <div className='ms-2 progress rounded-pill saving-progress-bar' role='progressbar' aria-label="Default striped example" style={{height:"10px"}}>
                         <div className='progress-bar progress-bar-striped progress-bar-animated' role="progressbar" 
                         style={{width:`${progress}%`, backgroundColor:"#6f42c1",height:"10px"}}>
                         </div>
                     </div>
 
-                    <p className="fw-semibold mt-2 ms-3" style={{color:"#6f42c1"}}>
+                    <p className="fw-semibold mt-2 ms-3 saving-progress-percentage" style={{color:"#6f42c1"}}>
                         {progress}% Completed
                     </p>
-                    <div className='ms-2 p-3 rounded-3' style={{backgroundColor:"#dfd5fa"}}>
+                    <div className='ms-2 p-3 rounded-3 saving-progress-remaining' style={{backgroundColor:"#dfd5fa"}}>
                         <p className='mb-0 text-secondary'>
                             💜 ₹{remaining.toLocaleString()} left to reach your goal
                         </p>
@@ -73,8 +74,8 @@ export default function SavingProgress({goals,savings,handleNewGoal}) {
 
                 {/* right side */}
                 {/* outer circle */}
-                <div className='col-4 mb-4 d-flex justify-content-center align-items-center h-100'>
-                    <div style={{
+                <div className='col-4 mb-4 d-flex justify-content-center align-items-center h-100 saving-progress-right'>
+                    <div className="saving-progress-circle" style={{
                         width:"200px",
                         height:"200px",
                         borderRadius:"50%",
@@ -84,7 +85,7 @@ export default function SavingProgress({goals,savings,handleNewGoal}) {
                         background: `conic-gradient(#6f42c1  ${progress}%, #e9ecef ${progress}%)`}}>
                         
                         {/* inner circle */}
-                            <div style={{
+                            <div className="saving-progress-inner-circle" style={{
                                 width: "180px",
                                 height: "180px",
                                 borderRadius: "50%",

@@ -1,5 +1,7 @@
-import React, { useEffect,useRef } from 'react'
+import React, { useEffect,useRef } from 'react';
 import confetti from 'canvas-confetti';
+import './SavingsMessage.css'
+
 
 export default function SavingsMessage({progress,completedGoals,activeGoals,handleNewGoal}) {
     let progressMessage = '';
@@ -49,26 +51,26 @@ export default function SavingsMessage({progress,completedGoals,activeGoals,hand
         progressMessage = "🌱 Start saving today and take the first step towards your goal.";
     }
     return(
-        <div className="p-3 rounded-4 d-flex align-items-center justify-content-between"
+        <div className="p-3 rounded-4 d-flex align-items-center justify-content-between saving-message"
         style={{backgroundColor: "#fcdaff",border: "1px solid black"}}>
-            <div className='d-flex justify-content-center align-items-center'>
-                <div className="rounded-circle d-flex justify-content-center align-items-center me-3"
+            <div className='d-flex justify-content-center align-items-center saving-message-content'>
+                <div className="rounded-circle d-flex justify-content-center align-items-center me-3  saving-message-icon"
                     style={{width: "42px",height: "42px",minWidth: "42px",backgroundColor: "#f9f9f5"}}>
                     <i className="bi bi-lightbulb-fill"style={{color: "#e5a900",fontSize: "23px"}}></i>
                 </div>
 
-                <div>
-                    <p className="mb-1 fw-semibold" style={{fontSize:"18px"}}>
+                <div  className="saving-message-text">
+                    <p className="mb-1 fw-semibold  saving-message-title" style={{fontSize:"18px"}}>
                         Smart Saving
                     </p>
-                    <p className="mb-0" style={{fontSize:"15px" ,color: "#46005c"}}>
+                    <p className="mb-0 saving-message-description" style={{fontSize:"15px" ,color: "#46005c"}}>
                         {progressMessage}
                     </p>
                 </div>
             </div>
-            <div>
+            <div className="saving-message-action">
                 {allGoalsCompleted && (
-                    <button type="button" className="btn btn-sm mt-2 p-2" onClick={handleNewGoal}
+                    <button type="button" className="btn btn-sm mt-2 p-2  saving-message-button" onClick={handleNewGoal}
                     style={{backgroundColor: "#6f42c1",color: "#fff",
                     borderRadius: "6px",fontSize: "15px"}}>
                         <i className="bi bi-plus-circle me-2"></i>

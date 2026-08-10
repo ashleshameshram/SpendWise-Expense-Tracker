@@ -1,0 +1,122 @@
+/* TABLET (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .savings-heading-container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    .savings-icon {
+        width: 44px !important;
+        height: 44px !important;
+    }
+    .savings-icon-i {
+        font-size: 19px !important;
+    }
+    .savings-title {
+        font-size: 19px;
+    }
+    .savings-subtitle {
+        font-size: 13px;
+    }
+    .savings-image {
+        width: 80px !important;
+    }
+}
+ 
+/* LARGE PHONES (480px - 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+    .savings-heading-container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        align-items: center;
+        margin-top: 64px !important;
+    }
+    .savings-heading-left {
+        gap: 10px !important;
+    }
+    .savings-icon {
+        width: 40px !important;
+        height: 40px !important;
+    }
+    .savings-icon-i {
+        font-size: 17px !important;
+    }
+    .savings-content {
+        margin-top: 0 !important;
+    }
+    .savings-title {
+        font-size: 17px;
+        margin-bottom: 2px;
+    }
+    .savings-subtitle {
+        font-size: 12px;
+    }
+    .savings-image {
+        width: 60px !important;
+    }
+}
+ 
+/* MEDIUM/SMALL PHONES (300px - 479px) */
+@media (min-width: 300px) and (max-width: 479px) {
+    .savings-heading-container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        align-items: center;
+        margin-top: 65px !important;
+    }
+    .savings-heading-left {
+        gap: 10px !important;
+    }
+    .savings-icon {
+        width: 40px !important;
+        height: 40px !important;
+    }
+    .savings-icon-i {
+        font-size: 10px !important;
+    }
+    .savings-content {
+        margin-top: 0 !important;
+    }
+    .savings-title {
+        font-size: 15px;
+        margin-bottom: 2px;
+    }
+    .savings-subtitle {
+        font-size: 11px;
+    }
+    .savings-image {
+        width: 48px !important;
+    }
+}
+ 
+/* VERY SMALL SCREENS (below 300px) */
+@media (max-width: 299px) {
+    .savings-heading-container {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        align-items: center;
+         margin-top: 60px !important;
+    }
+    .savings-heading-left {
+        gap: 6px !important;
+    }
+    .savings-icon {
+        width: 32px !important;
+        height: 32px !important;
+    }
+    .savings-icon-i {
+        font-size: 13px !important;
+    }
+    .savings-content {
+        margin-top: 0 !important;
+    }
+    .savings-title {
+        font-size: 13px;
+        margin-bottom: 2px;
+    }
+    .savings-subtitle {
+        font-size: 10px;
+    }
+    .savings-image {
+        width: 38px !important;
+    }
+}

@@ -1,5 +1,6 @@
 import React from 'react'
 import SavingInsight from './SavingInsight.jsx'
+import './SavingDashboard.css'
 
 export default function SavingDashboard({ savings, goals }) {
 
@@ -42,22 +43,19 @@ export default function SavingDashboard({ savings, goals }) {
         )
         : 0;
 
-
     return (
-        <div className='row mt-4 align-items-start'>
+        <div className='row mt-4 align-items-start saving-dashboard'>
 
             {/* Left Dashboard Cards */}
-            <div className='col-7 d-flex align-items-start'>
+            <div className='col-7 d-flex align-items-start saving-dashboard-cards'>
                 {/* Total Saved */}
-                <div
-                    className='ms-4 shadow-lg rounded-4 p-4'
+                <div className='ms-4 shadow-lg rounded-4 p-4 saving-dashboard-card'
                     style={{
                         width: "200px",
                         backgroundColor: "#ffe9e9"
                     }}
                 >
-                    <div
-                        className="rounded-circle d-flex justify-content-center align-items-center"
+                    <div className="saving-dashboard-icon rounded-circle d-flex justify-content-center align-items-center"
                         style={{
                             width: "48px",
                             height: "48px",
@@ -85,15 +83,13 @@ export default function SavingDashboard({ savings, goals }) {
 
 
                 {/* This Month */}
-                <div
-                    className='ms-4 shadow-lg rounded-4 p-4'
+                <div className='ms-4 shadow-lg rounded-4 p-4 saving-dashboard-card'
                     style={{
                         width: "200px",
                         backgroundColor: "#fdefe5"
-                    }}
-                >
-                    <div
-                        className="rounded-circle d-flex justify-content-center align-items-center"
+                    }}>
+
+                    <div className="saving-dashboard-icon rounded-circle d-flex justify-content-center align-items-center"
                         style={{
                             width: "48px",
                             height: "48px",
@@ -122,14 +118,13 @@ export default function SavingDashboard({ savings, goals }) {
 
                 {/* Growth */}
                 <div
-                    className='ms-4 shadow-lg rounded-4 p-4'
+                    className='ms-4 shadow-lg rounded-4 p-4 saving-dashboard-card'
                     style={{
                         width: "200px",
                         backgroundColor: "#dcfddd"
                     }}
                 >
-                    <div
-                        className="rounded-circle d-flex justify-content-center align-items-center"
+                    <div className="saving-dashboard-icon rounded-circle d-flex justify-content-center align-items-center"
                         style={{
                             width: "48px",
                             height: "48px",
@@ -155,12 +150,10 @@ export default function SavingDashboard({ savings, goals }) {
                         </p>
                     </div>
                 </div>
-
             </div>
 
-
             {/* Quick Insights */}
-            <div className='col-5'>
+            <div className='col-5 saving-dashboard-insight'>
                 <SavingInsight
                     goals={goals}
                     growth={growth}
