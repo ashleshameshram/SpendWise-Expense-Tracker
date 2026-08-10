@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import QuickSummary from './QuickSummary';
+import './TransactionForm.css'
 
 export default function TransactonForm({transactions,onAdd, onUpdate, editForm, editingId}) {
     const [formData, setFormData] = useState({description : "",amount : "", category : "",type: ""});  
@@ -65,8 +66,8 @@ export default function TransactonForm({transactions,onAdd, onUpdate, editForm, 
     }, [editingId, editForm]);
 
     return(
-        <div className='row rounded-4' style={{marginLeft:"30px", gap:"30px"}} >
-            <div className="col-6 border border-secondary rounded-4 p-4">        
+        <div className='row rounded-4 transaction-row' style={{marginLeft:"30px", gap:"30px"}} >
+            <div className="col-6 border border-secondary rounded-4 p-4 form-card">        
             <h5>{editingId ? "Edit Transaction" : "Add Transaction"}</h5>
             <p className='text-muted' style={{lineHeight:"1"}}>Record your income and expense</p>
 
@@ -132,9 +133,9 @@ export default function TransactonForm({transactions,onAdd, onUpdate, editForm, 
             </div>
         
         </div> 
-        <div className="col-5 border border-secondary rounded-4 p-2">
+        <div className="col-5 border border-secondary rounded-4 p-2 summary-card">
             <QuickSummary  transactions={transactions}/>
         </div>
         </div>
     )
-}
+}   

@@ -1,0 +1,63 @@
+    /* Desktop (992px+) uses col-6 + col-5 side-by-side as-is — untouched. */
+
+/* STACK TO SINGLE ROW — TABLET AND BELOW (up to 991px) */
+@media (max-width: 991px) {
+    .transaction-row {
+        flex-direction: column !important;
+        margin-left: 0 !important;
+    }
+    .form-card,
+    .summary-card {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
+/* TABLET (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .transaction-row {
+        margin: 0 20px !important;
+        gap: 20px !important;
+    }
+    .form-card,
+    .summary-card {
+        padding: 20px !important;
+    }
+}
+
+/* LARGE PHONES (480px - 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+    .transaction-row {
+        margin: 0 14px !important;
+        gap: 16px !important;
+    }
+    .form-card,
+    .summary-card {
+        padding: 16px !important;
+    }
+}
+
+/* MEDIUM/SMALL PHONES (300px - 479px) */
+@media (min-width: 300px) and (max-width: 479px) {
+    .transaction-row {
+        margin: 0 8px !important;
+        gap: 12px !important;
+    }
+    .form-card,
+    .summary-card {
+        padding: 12px !important;
+    }
+}
+
+/* VERY SMALL SCREENS (below 300px) */
+@media (max-width: 299px) {
+    .transaction-row {
+        margin: 0 6px !important;
+        gap: 10px !important;
+    }
+    .form-card,
+    .summary-card {
+        padding: 10px !important;
+    }
+}
