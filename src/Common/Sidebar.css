@@ -235,8 +235,7 @@
         height: 44px;
         border: none;
         border-radius: 10px;
-        background-color: #222674;
-        color: white;
+        background-color: #F5F7FB;
         align-items: center;
         justify-content: center;
         font-size: 25px;
@@ -250,5 +249,84 @@
         inset: 0;
         background: rgba(0, 0, 0, 0.35);
         z-index: 1050;
+    }
+}
+
+.mobile-topbar {
+    display: none;
+}
+ 
+@media (max-width: 767px) {
+    .mobile-topbar {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 56px;
+        padding: 0 15px;
+        background: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        z-index: 1000;
+    }
+    /* Override the standalone fixed positioning now that the button lives inside the top bar */
+    .mobile-topbar .mobile-menu-btn {
+        position: static;
+        width: 38px;
+        height: 38px;
+        font-size: 20px;
+        box-shadow: none;
+    }
+    .mobile-topbar-logo {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .mobile-topbar-logo i {
+        color: #8287f1;
+        font-size: 23px;
+        width: 38px;
+        height: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .mobile-topbar-logo span {
+        font-weight: 600;
+        font-size: 17px;
+        color: #222674;
+    }
+    .heart-logo {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+    }
+}
+ 
+@media (max-width: 400px) {
+    .mobile-topbar {
+        height: 52px;
+        padding: 0 12px;
+        gap: 8px;
+    }
+    .mobile-topbar .mobile-menu-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 18px;
+    }
+    .mobile-topbar-logo i {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+    }
+    .mobile-topbar-logo span {
+        font-size: 15px;
+    }
+    .heart-logo {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
     }
 }

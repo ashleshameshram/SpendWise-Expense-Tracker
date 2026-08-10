@@ -9,10 +9,20 @@ export default function Sidebar() {
     }
   return (
     <>  
-        {/* Mobile menu button */}
-        <button className="mobile-menu-btn" onClick={() => setIsOpen(true)}>
-            <i className="bi bi-list"></i>
-        </button>
+        {/* Mobile Top Bar: menu button + logo */}
+        <div className="mobile-topbar">
+            <button className="mobile-menu-btn" onClick={() => setIsOpen(true)}>
+                <i className="fa-solid fa-bars"></i>
+            </button>
+            <div className="mobile-topbar-logo">
+                <i className="bi bi-wallet2"></i>
+                <span>SpendWise</span>
+            </div>
+            <div className="heart-logo">
+                <i className="fa-solid fa-heart" style={{color: "rgb(247, 4, 139)"}}></i>
+            </div>
+        </div>
+
          {/* Mobile Overlay */} 
         {isOpen && (
             <div className="sidebar-overlay" onClick={closedSidebar}>
@@ -22,7 +32,7 @@ export default function Sidebar() {
             {/* Logo */}
                 <div className="logo">
                     <div className="logo-icon">
-                        <i className="bi bi-wallet2" style={{color:"#8287f1"}}></i>
+                        <i className="bi bi-wallet2"></i>
                     </div>
                     <h2>SpendWise</h2>
 
