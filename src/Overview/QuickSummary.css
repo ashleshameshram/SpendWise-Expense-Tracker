@@ -1,0 +1,96 @@
+/* TABLET (768px - 991px) — keep 2x2 grid, shrink sizes slightly */
+@media (min-width: 768px) and (max-width: 991px) {
+    .summary-icon {
+        width: 42px !important;
+        height: 42px !important;
+    }
+    .summary-icon i {
+        font-size: 15px;
+    }
+    .summary-label {
+        font-size: 12px !important;
+    }
+    .summary-sublabel {
+        font-size: 12px !important;
+    }
+    .summary-value {
+        font-size: 18px !important;
+    }
+}
+ 
+/* ===================== MOBILE (below 768px) — 2x2 grid kept, dividers kept ===================== */
+ 
+/* LARGE PHONES (480px - 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+    .summary-icon {
+        width: 40px !important;
+        height: 40px !important;
+    }
+    .summary-icon i {
+        font-size: 15px;
+    }
+    .summary-item {
+        gap: 10px !important;
+        padding-top: 12px !important;
+        padding-bottom: 12px !important;
+    }
+    .summary-label {
+        font-size: 12px !important;
+    }
+    .summary-sublabel {
+        font-size: 12px !important;
+    }
+    .summary-value {
+        font-size: 17px !important;
+    }
+}
+ 
+/* MEDIUM/SMALL PHONES (300px - 479px) */
+@media (min-width: 300px) and (max-width: 479px) {
+    .summary-icon {
+        width: 36px !important;
+        height: 36px !important;
+    }
+    .summary-icon i {
+        font-size: 13px;
+    }
+    .summary-item {
+        gap: 8px !important;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+    .summary-label {
+        font-size: 11px !important;
+    }
+    .summary-sublabel {
+        font-size: 11px !important;
+    }
+    .summary-value {
+        font-size: 15px !important;
+    }
+}
+ 
+/* VERY SMALL SCREENS (below 300px) */
+@media (max-width: 299px) {
+    .summary-icon {
+        width: 32px !important;
+        height: 32px !important;
+    }
+    .summary-icon i {
+        font-size: 12px;
+    }
+    .summary-item {
+        gap: 6px !important;
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+    }
+    .summary-label {
+        font-size: 10px !important;
+    }
+    .summary-sublabel {
+        font-size: 10px !important;
+    }
+    .summary-value {
+        font-size: 13px !important;
+    }
+}
