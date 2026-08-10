@@ -28,7 +28,7 @@ export default function Overview({savings,income,expense,balance,transactions,on
     greeting = "Good Evening";
     icon = "bi bi-moon-stars-fill";
     iconColor = "#6366F1";
-    bgColor = "#EEF2FF";
+    bgColor = "#dfdffd";
   }
   return (
     <div className="overview-container">
