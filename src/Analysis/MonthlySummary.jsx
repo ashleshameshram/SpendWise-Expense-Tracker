@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './MonthlySummary.css'
 
 export default function MonthlySummary({transactions}) {
     const today = new Date();
@@ -29,9 +30,9 @@ export default function MonthlySummary({transactions}) {
     let balance = totalIncome - totalExpense;
 
     return(
-        <div className='p-4 rounded-4 ' style={{backgroundColor:"#eeecff"}}>
-            <h4>Monthly Summary</h4>
-            <div className='input-group'>
+        <div className='p-4 rounded-4 monthly-summary ' style={{backgroundColor:"#eeecff"}}>
+            <h4 className='monthly-summary-title'>Monthly Summary</h4>
+            <div className='input-group monthly-month-select'>
                 <span className="input-group-text">
                     <i className="fa-solid fa-calendar-days"></i>
                 </span>
@@ -52,19 +53,23 @@ export default function MonthlySummary({transactions}) {
                     <option value="December">December</option>
                 </select>
             </div>
-            <div className="row mt-4">
-                <div className="col">
+            <div className="row mt-4 monthly-summary-values">
+                <div className="col monthly-summary-item">
                     <h5>Income</h5>
-                    <h5 className='text-success'><i className="fa-solid fa-indian-rupee-sign"></i>
-                    {totalIncome.toLocaleString("en-IN")}</h5>
+                    <h5 className='text-success monthly-summary-amount'>
+                        <i className="fa-solid fa-indian-rupee-sign"></i>
+                        {totalIncome.toLocaleString("en-IN")}
+                    </h5>
                 </div>
-                <div className="col">
+                <div className="col monthly-summary-item">
                     <h5>Expenses</h5>
-                    <h5 className='text-danger'><i className="fa-solid fa-indian-rupee-sign"></i>
-                    {totalExpense.toLocaleString("en-IN")}</h5>
+                    <h5 className='text-danger monthly-summary-amount'>
+                        <i className="fa-solid fa-indian-rupee-sign"></i>
+                        {totalExpense.toLocaleString("en-IN")}
+                    </h5>
                 </div>
-                <div className="col">
-                    <h5>Balance</h5>
+                <div className="col monthly-summary-item">
+                    <h5  className="monthly-summary-amount">Balance</h5>
                     <h5 style={{color:"rgb(14, 95, 0)"}}><i className="fa-solid fa-indian-rupee-sign"></i>
                     {balance.toLocaleString("en-IN")}</h5>
                 </div>

@@ -1,0 +1,170 @@
+.expense-analysis {
+    width: 100%;
+}
+.analysis-heading {
+    width: 100%;
+}
+/*  PIE CHART CONTAINER */
+
+.expense-chart-container {
+    width: 100%;
+    overflow: hidden;
+}
+/* PIE CHART WRAPPER*/
+
+.expense-pie-wrapper {
+    width: 480px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+/* ACTUAL RECHARTS CHART*/
+
+.expense-pie-chart {
+    width: 480px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: center center;
+}
+@media (min-width: 1024px) {
+    .expense-pie-wrapper {
+        width: 480px;
+        height: 300px;
+    }
+    .expense-pie-chart {
+        transform: scale(1);
+    }
+}
+@media (min-width: 768px) and (max-width: 999px) {
+    .expense-analysis-card {
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+    }
+    .expense-chart-container {
+        min-height: 320px;
+    }
+    .expense-pie-wrapper {
+        width: 100%;
+        height: 300px;
+    }
+    .expense-pie-chart {
+        transform: scale(0.88);
+    }
+}
+/* MOBILE  577px - 767px */
+
+@media (min-width: 577px) and (max-width: 767px) {
+    .analysis-heading {
+        padding: 15px !important;
+        margin-top: 55px;
+    }
+    .analysis-heading h4 {
+        font-size: 1.3rem;
+    }
+    .analysis-heading p {
+        font-size: 0.9rem;
+    }
+    .expense-analysis-card {
+        margin-left: 14px !important;
+        margin-right: 14px !important;
+        padding: 16px !important;
+    }
+    .expense-chart-container {
+        min-height: 320px;
+    }
+    .expense-pie-wrapper {
+        width: 100%;
+        height: 300px;
+    }
+    .expense-pie-chart {
+        transform: scale(0.78);
+    }
+}
+/* SMALL MOBILE 576px and below */
+
+@media (max-width: 576px) {
+    /* Heading */
+    .analysis-heading {
+        padding: 15px !important;
+        gap: 12px !important;
+        margin-top: 55px;
+    }
+    .analysis-heading h4 {
+        font-size: 1.2rem;
+    }
+    .analysis-heading p {
+        font-size: 0.82rem;
+        line-height: 1.35;
+    }
+    /* Main Card*/
+    .expense-analysis-card {
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+        padding: 14px !important;
+    }
+    .expense-analysis-card > h4 {
+        font-size: 1.1rem;
+        margin-bottom: 16px !important;
+    }
+    /* Chart Container */
+    .expense-chart-container {
+        width: 100%;
+        min-height: 250px;
+        padding: 0 !important;
+        overflow: hidden;
+    }
+    /* Chart Wrapper*/
+    .expense-pie-wrapper {
+        width: 100%;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+    /* Scale entire existing Recharts chart*/
+    .expense-pie-chart {
+        width: 480px;
+        height: 300px;
+        flex-shrink: 0;
+        transform: scale(0.68);
+        transform-origin: center center;
+    }
+}
+/* VERY SMALL PHONES
+   400px and below
+*/
+@media (max-width: 400px) {
+    .analysis-heading {
+        padding: 15px !important;
+        gap: 10px !important;
+        margin-top: 55px;
+    }
+    .analysis-heading h4 {
+        font-size: 1.1rem;
+    }
+    .analysis-heading p {
+        font-size: 0.78rem;
+    }
+    .expense-analysis-card {
+        margin-left: 8px !important;
+        margin-right: 8px !important;
+        padding: 12px !important;
+    }
+    .expense-analysis-card > h4 {
+        font-size: 1rem;
+    }
+    .expense-chart-container {
+        min-height: 230px;
+    }
+    .expense-pie-wrapper {
+        height: 230px;
+    }
+    .expense-pie-chart {
+        transform: scale(0.60);
+    }
+}

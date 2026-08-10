@@ -1,0 +1,96 @@
+.monthly-spending-card {
+    width: auto;
+    overflow: hidden;
+}
+
+.monthly-spending-title {
+    margin-bottom: 0;
+}
+
+.monthly-chart-wrapper {
+    width: 90%;
+    height: 400px;
+    margin-top: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+@media (max-width: 575px) {
+
+    .monthly-spending-card {
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+        margin-top: 28px !important;
+        padding: 14px !important;
+        border-radius: 16px !important;
+        overflow: hidden !important;
+    }
+
+    .monthly-spending-title {
+        margin-left: 2px !important;
+        font-size: 1.05rem !important;
+        line-height: 1.3;
+        white-space: nowrap;
+    }
+
+    .monthly-chart-wrapper {
+        width: 100% !important;
+        height: 260px !important;
+        margin-top: 18px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .monthly-chart-wrapper
+    .recharts-xAxis
+    .recharts-cartesian-axis-tick
+    text {
+        font-size: 10px !important;
+    }
+
+    .monthly-chart-wrapper
+    .recharts-yAxis
+    .recharts-cartesian-axis-tick
+    text {
+        font-size: 9px !important;
+    }
+
+    .monthly-chart-wrapper
+    .recharts-line-curve {
+        stroke-width: 2.5px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .monthly-spending-card {
+        margin-left: 8px !important;
+        margin-right: 8px !important;
+        padding: 12px !important;
+    }
+
+    .monthly-spending-title {
+        font-size: 1rem !important;
+    }
+
+    .monthly-chart-wrapper {
+        height: 245px !important;
+        margin-top: 16px !important;
+    }
+
+    .monthly-chart-wrapper
+    .recharts-xAxis
+    .recharts-cartesian-axis-tick
+    text {
+        font-size: 9px !important;
+    }
+
+    .monthly-chart-wrapper
+    .recharts-yAxis
+    .recharts-cartesian-axis-tick
+    text {
+        font-size: 8px !important;
+    }
+}

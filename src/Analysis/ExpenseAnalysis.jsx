@@ -1,6 +1,7 @@
 import React from "react";
-import {Pie,PieChart,Cell,Tooltip,Legend} from "recharts";
+import {Pie,PieChart,Cell,Tooltip,Legend,ResponsiveContainer} from "recharts";
 import MonthlySummary from "./MonthlySummary";
+import './ExpenseAnalysis.css'
 
 export default function ExpenseAnalysis({ transactions }) {
     const expenses = transactions.filter(
@@ -43,7 +44,7 @@ export default function ExpenseAnalysis({ transactions }) {
     return (
         <div>
             {/* Analysis Heading */}
-            <div className="d-flex align-items-center gap-3 p-3">
+            <div className="d-flex align-items-center gap-3 p-3 analysis-heading">
                 <div className="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
                 style={{width: "50px",height: "50px",backgroundColor: "rgb(221, 217, 253)"}}>
                     <i className="fa-solid fa-chart-pie"
@@ -62,7 +63,7 @@ export default function ExpenseAnalysis({ transactions }) {
             </div>
 
             {/* Main Card */}
-            <div className="mx-3 mx-md-4 border rounded-4 p-3 p-md-4 mt-2 shadow-sm"
+            <div className="mx-3 mx-md-4 border rounded-4 p-3 p-md-4 mt-2 shadow-sm expense-analysis-card"
             style={{backgroundColor: "#ffffff"}}>
                 <h4 className="mb-4 fw-semibold">
                     Expenses by Category
@@ -71,16 +72,12 @@ export default function ExpenseAnalysis({ transactions }) {
                 <div className="row g-4 align-items-stretch">
                     {/* Pie Chart Column */}
                     <div className="col-12 col-xl-7">
-                        <div className="h-100 rounded-4 d-flex align-items-center justify-content-center p-3"
+                        <div className="expense-chart-container h-100 rounded-4 d-flex align-items-center justify-content-center p-3"
                         style={{backgroundColor: "#f7f6ff"}}>
                             {charData.length > 0 ? (
-                                <PieChart
-                                    width={480}
-                                    height={300}
-                                    style={{
-                                        backgroundColor: "#f7f6ff",
-                                        borderRadius: "12px",
-                                    }}>
+                                <div className="expense-pie-wrapper">
+                                    <div className="expense-pie-chart">
+                                    <PieChart width={480} height={300}>
                                     <Pie
                                         data={charData}
                                         dataKey="value"
@@ -160,6 +157,8 @@ export default function ExpenseAnalysis({ transactions }) {
                                         }
                                     />
                                 </PieChart>
+                                </div>
+                                </div>
                             ) : (
                                 <div className="text-center py-5">
                                     <i className="bi bi-pie-chart fs-1"

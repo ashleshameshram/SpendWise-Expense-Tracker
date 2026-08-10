@@ -1,6 +1,7 @@
 import React from 'react'
 import {  ResponsiveContainer,CartesianGrid,LineChart, XAxis, YAxis, Line, Tooltip } 
 from 'recharts';
+import './MonthlySpendingChart.css'
 
 export default function MonthlySpendingChart({transactions}) {
     const monthlyExpense = [
@@ -27,18 +28,26 @@ export default function MonthlySpendingChart({transactions}) {
     });
 
     return(
-        <div className='m-4 mt-5 shadow-lg p-3 border rounded-4'>
-            <h4 className='ms-3'>Monthly Spending Chart</h4>
-            <ResponsiveContainer width="90%" height={400} className='mt-4'>
-                <LineChart  data={monthlyExpense}>
+        <div className='m-4 mt-5 shadow-lg p-3 border rounded-4 monthly-spending-card'>
+            <h4 className='ms-3 monthly-spending-title'>
+                Monthly Spending Chart
+            </h4>
+            <div className="monthly-chart-wrapper">
+            <ResponsiveContainer width="100%" height="100%">
+                <LineChart  data={monthlyExpense} margin={{top: 10,right: 10,left: 5,bottom: 5}}>
                     <XAxis dataKey="month" />
                     <YAxis width={80} tickFormatter={(value) => `₹${value.toLocaleString("en-IN")}`}/>
                     <Tooltip />
-                    <Line type="monotone" dataKey="amount" stroke="#8B5CF6" strokeWidth={3}
-                    dot={{ r: 5 }} activeDot={{ r: 8 }}/>
+                    <Line type="monotone" 
+                        dataKey="amount" 
+                        stroke="#8B5CF6" 
+                        strokeWidth={3}
+                        dot={{ r: 5 }} 
+                        activeDot={{ r: 8 }}/>
                     <CartesianGrid strokeDasharray="3 3" vertical={false}/>
                 </LineChart>
             </ResponsiveContainer>
+            </div>
         </div>
     )
 }

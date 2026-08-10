@@ -1,0 +1,43 @@
+.analysis-page {
+    width: 100%;
+}
+
+.analysis-content {
+    width: 100%;
+}
+
+@media (max-width: 992px) {
+
+    .analysis-page {
+        width: 100%;
+    }
+
+    .analysis-content {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .analysis-page {
+        width: 100%;
+    }
+
+    .analysis-content {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .analysis-page {
+        width: 100%;
+    }
+
+    .analysis-content {
+        width: 100%;
+    }
+
+}
