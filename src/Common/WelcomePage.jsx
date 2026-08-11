@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './WelcomePage.css'
 
 export default function WelcomePage({onContinue}) {
     let [name,setName] = useState("");
@@ -9,23 +10,36 @@ export default function WelcomePage({onContinue}) {
     }
 
     return(
-         <div className="d-flex align-items-center justify-content-center" 
-            style={{height: "100vh", background: "rgba(244, 216, 255, 0.74)"}}>
-            <div className=" bg-white rounded-4 p-4 shadow" style={{width: "350px"}}>
-                <h4 className="mb-2">What should we call you?</h4>
-                <p className="text-muted" style={{fontSize: "14px"}}>
+        <div className="welcome-page">
+            <div className="welcome-blob welcome-blob-1"></div>
+            <div className="welcome-blob welcome-blob-2"></div>
+            <div className="welcome-blob welcome-blob-3"></div>
+
+            <div className="welcome-card">
+                <div className="welcome-icon-badge">
+                    <i className="bi bi-wallet2"></i>
+                </div>
+
+                <h4 className="welcome-title">What should we call you?</h4>
+                <p className="welcome-subtitle">
                     We'll use this to personalize your dashboard.
                 </p>
-                <input
-                    type="text"
-                    className="form-control mb-3"
-                    placeholder="Your name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    onKeyDown={(e) => e.key === "Enter" && handleContinue()}
-                />
-                <button className="btn btn-primary w-100" onClick={handleContinue}>
+
+                <div className="welcome-input-wrap">
+                    <i className="bi bi-person welcome-input-icon"></i>
+                    <input
+                        type="text"
+                        className="form-control welcome-input"
+                        placeholder="Your name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        onKeyDown={(e) => e.key === "Enter" && handleContinue()}
+                    />
+                </div>
+
+                <button className="welcome-btn" onClick={handleContinue}>
                     Continue
+                    <i className="bi bi-arrow-right ms-2"></i>
                 </button>
             </div>
         </div>
