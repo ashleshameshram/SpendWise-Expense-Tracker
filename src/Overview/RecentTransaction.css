@@ -12,7 +12,7 @@
         padding: 20px !important;
     }
     .recent-header h3 {
-        font-size: 20px;
+        font-size: 23px;
     }
     .recent-header .btn {
         font-size: 13px;
@@ -22,10 +22,10 @@
         height: 40px !important;
     }
     .txn-desc {
-        font-size: 14px;
+        font-size: 18px;
     }
     .txn-meta {
-        font-size: 12px;
+        font-size: 13px;
     }
     .txn-amount {
         font-size: 14px;
@@ -89,7 +89,6 @@
         padding: 0;
     }
  
-    /* TRANSACTION ITEM — right side never shrinks/wraps, left side truncates instead */
     .txn-item {
         flex-wrap: nowrap !important;
         gap: 8px;
@@ -135,7 +134,7 @@
         background: #ffffff;
     }
     .recent-header h3 {
-        font-size: 18px;
+        font-size: 20px;
         margin-bottom: 0;
     }
     .recent-header .btn {
@@ -158,10 +157,10 @@
         font-size: 13px;
     }
     .txn-desc {
-        font-size: 13.5px;
+        font-size: 19px;
     }
     .txn-meta {
-        font-size: 11px;
+        font-size: 13px;
     }
     .txn-amount {
         font-size: 13.5px;
@@ -185,7 +184,7 @@
         background: #ffffff;
     }
     .recent-header h3 {
-        font-size: 16px;
+        font-size: 20px;
         margin-bottom: 0;
     }
     .recent-header .btn {
@@ -221,10 +220,10 @@
         font-size: 12px;
     }
     .txn-desc {
-        font-size: 12.5px;
+        font-size: 16px;
     }
     .txn-meta {
-        font-size: 10.5px;
+        font-size: 13px;
     }
     .txn-amount {
         font-size: 12.5px;

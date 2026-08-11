@@ -22,12 +22,12 @@
         min-width: 0;
     }
     .heading-content h4 {
-        font-size: 18px;
+        font-size: 20px;
         line-height: 1.3;
         margin: 0;
     }
     .heading-content p {
-        font-size: 13px;
+        font-size: 16px;
         line-height: 1.4;
         margin-top: 5px;
     }
@@ -48,10 +48,10 @@
         font-size: 17px !important;
     }
     .heading-content h4 {
-        font-size: 16px;
+        font-size: 20px;
     }
     .heading-content p {
-        font-size: 12px;
+        font-size: 16px;
     }
 }
 /* SMALL PHONES */

@@ -1,5 +1,3 @@
-/* Desktop (lg, 992px+) uses col-lg-3 as-is — 4 cards per row, untouched. */
-
 /* TABLET (768px - 991px) — 2 cards per row via col-md-6 */
 @media (min-width: 768px) and (max-width: 991px) {
     .dashboard-row {
@@ -21,7 +19,7 @@
         font-size: 22px;
     }
     .dashboard-card h6 {
-        font-size: 13px;
+        font-size: 16px;
     }
 }
 
@@ -46,7 +44,7 @@
         font-size: 18px;
     }
     .dashboard-card h6 {
-        font-size: 11px;
+        font-size: 16px;
     }
 }
 
@@ -71,7 +69,7 @@
         font-size: 16px;
     }
     .dashboard-card h6 {
-        font-size: 10px;
+        font-size: 16px;
     }
 }
 
