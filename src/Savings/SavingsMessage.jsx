@@ -14,10 +14,11 @@ export default function SavingsMessage({progress,completedGoals,activeGoals,hand
         // Fire confetti only when a NEW goal becomes completed
         if(completedGoals.length > prevCompletedCount.current){
             confetti({
-                particleCount: 300,
-                spread:200,
+                particleCount: 400,
+                spread:100,
                 origin: {
-                    y:0.5
+                    y:0.5,
+                    x:0.5,
                 }
             });
         }

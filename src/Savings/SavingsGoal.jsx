@@ -2,7 +2,7 @@ import React from 'react'
 import './SavingsGoals.css'
 import { useNavigate } from "react-router-dom";
 
-export default function SavingsGoal({goals,savings,deleteGoal}) {
+export default function SavingsGoal({completedGoals,goals,savings,deleteGoal}) {
     const navigate = useNavigate();
     const goalIcons = {
         "Emergency Fund": "bi bi-shield-check",
@@ -59,18 +59,37 @@ export default function SavingsGoal({goals,savings,deleteGoal}) {
 
             <div className='goals-list'>
                 {goals.length === 0 ? (
-                    <p className="text-center py-4 fs-5 fw-semibold sg-empty" style={{color:"#001463"}}>
-                        <i className="bi bi-bullseye me-2"></i>
-                         All your savings goals are completed!
-                        <p className="text-secondary mb-3 sg-empty-sub">
-                            Amazing work! View your completed goals in Savings Insights.
-                        </p>
-                        <button className="btn btn-primary rounded-3 sg-empty-btn"
-                        onClick={() => navigate("/savings-insights-page")}>
-                            View Completed Goals
-                            <i className="bi bi-arrow-right ms-2"></i>
-                        </button>
-                    </p>
+                    completedGoals.length > 0 ? (
+                        // All goals were actually completed
+                        <div className="text-center py-4 sg-empty">
+                            <div className="fs-5 fw-semibold" style={{ color: "#001463" }}>
+                                <i className="bi bi-trophy-fill text-success me-2"></i>
+                                All your savings goals are completed!
+                            </div>
+
+                            <p className="text-secondary mb-3 sg-empty-sub">
+                                Amazing work! View your completed goals in Savings Insights.
+                            </p>
+
+                            <button className="btn rounded-3 sg-empty-btn text-white" style={{backgroundColor:"#001463"}}
+                            onClick={() => navigate("/savings-insights-page")}>
+                                View Completed Goals
+                                <i className="bi bi-arrow-right ms-2"></i>
+                            </button>
+                        </div>
+                    ) : (
+                        // User has never created a goal
+                        <div className="text-center py-4 sg-empty">
+                            <div className="fs-5 fw-semibold" style={{ color: "#001463" }}>
+                                <i className="bi bi-bullseye me-2"></i>
+                                Start your savings journey
+                            </div>
+
+                            <p className="text-secondary mb-3 sg-empty-sub">
+                                Create your first savings goal and start saving towards it.
+                            </p>
+                        </div>
+                    )
                     ) : (
                     goals.map((goal,index) => {
                             const currentAmount = savings

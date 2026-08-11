@@ -35,22 +35,14 @@ export default function SavingInsightsFooter() {
             <p className="text-secondary small mb-0">
               You're doing amazing. Stay consistent and achieve your next goal! 🚀
             </p>
-
           </div>
-
         </div>
 
 
-        {/* Button */}
-        <button
-          className="btn text-white fw-semibold rounded-3 px-4 py-2 footer-button"
-          style={{
-            backgroundColor: "#3730a3",
-            minWidth: "156px",
-          }}
-        >
-          Set New Goal
-        </button>
+        {/* Image */} 
+        <div className="footer-image-wrapper flex-shrink-0"> 
+          <img src="./savemoney.png" alt="Saving money" className="footer-image" /> 
+        </div>
 
       </div>
 
