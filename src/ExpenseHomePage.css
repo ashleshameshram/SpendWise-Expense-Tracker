@@ -10,3 +10,26 @@
     overflow-x: hidden;
     overflow-y: auto;
 }
+
+@media (max-width: 768px) {
+    .layout {
+        display: block;
+        min-height: 100vh;
+    }
+    .main-content {
+        height: auto;
+        min-height: 100vh;
+        overflow-y: visible;
+        overflow-x: hidden;
+    }
+    html,
+    body,
+    #root {
+        width: 100%;
+        min-height: 100%;
+        overflow-x: hidden;
+    }
+    body {
+        -webkit-overflow-scrolling: touch;
+    }
+}
