@@ -1,18 +1,19 @@
 import React from "react";
+import './SavingInsightsFooter.css'
 
 export default function SavingInsightsFooter() {
   return (
-    <div className="container-fluid p-0 mt-4">
+    <div className="container-fluid p-0 mt-4 saving-insights-footer">
 
-      <div className="rounded-4 px-4 py-3 d-flex align-items-center justify-content-between"
+      <div className="rounded-4 px-4 py-3 d-flex align-items-center justify-content-between footer-box"
       style={{backgroundColor: "#e1d9fd"}}>
 
         {/* Left Content */}
-        <div className="d-flex align-items-center gap-3">
+        <div className="d-flex align-items-center gap-3 footer-content">
 
           {/* Icon */}
           <div
-            className="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+            className="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 footer-icon"
             style={{
               width: "58px",
               height: "58px",
@@ -25,7 +26,7 @@ export default function SavingInsightsFooter() {
 
 
           {/* Message */}
-          <div>
+          <div className="footer-message">
 
             <h6 className="fw-bold mb-1">
               Keep going!
@@ -42,7 +43,7 @@ export default function SavingInsightsFooter() {
 
         {/* Button */}
         <button
-          className="btn text-white fw-semibold rounded-3 px-4 py-2"
+          className="btn text-white fw-semibold rounded-3 px-4 py-2 footer-button"
           style={{
             backgroundColor: "#3730a3",
             minWidth: "156px",

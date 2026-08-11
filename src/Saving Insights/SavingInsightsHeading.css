@@ -1,0 +1,171 @@
+@media (max-width: 1024px) {
+    .savings-insights-heading {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .savings-insights-heading-content {
+        gap: 12px !important;
+        min-width: 0;
+    }
+
+    .savings-insights-heading-icon {
+        width: 46px !important;
+        height: 46px !important;
+        min-width: 46px;
+    }
+
+    .savings-insights-heading-icon i {
+        font-size: 20px !important;
+    }
+
+    .savings-insights-heading-text {
+        min-width: 0;
+    }
+
+    .savings-insights-heading-text h4 {
+        margin-bottom: 5px;
+        font-size: 25px;
+        line-height: 1.2;
+    }
+
+    .savings-insights-heading-text p {
+        margin-bottom: 0;
+        font-size: 13px;
+        line-height: 1.35 !important;
+    }
+
+    .savings-insights-heading-image img {
+        width: 75px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .savings-insights-heading {
+        padding: 12px 16px 8px !important;
+        align-items: flex-start !important;
+    }
+
+    .savings-insights-heading-content {
+        gap: 10px !important;
+        align-items: center !important;
+        flex: 1;
+    }
+
+    .savings-insights-heading-icon {
+        width: 42px !important;
+        height: 42px !important;
+        min-width: 42px;
+    }
+
+    .savings-insights-heading-icon i {
+        font-size: 18px !important;
+    }
+
+    .savings-insights-heading-text {
+        margin-top: 0 !important;
+    }
+
+    .savings-insights-heading-text h4 {
+        font-size: 21px;
+        line-height: 1.2;
+        margin-bottom: 4px;
+    }
+
+    .savings-insights-heading-text p {
+        font-size: 11px;
+        line-height: 1.35 !important;
+        max-width: 260px;
+    }
+
+    .savings-insights-heading-image {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        margin-left: 8px;
+    }
+
+    .savings-insights-heading-image img {
+        width: 58px !important;
+        max-width: 58px;
+    }
+}
+
+@media (max-width: 575px) {
+    .savings-insights-heading {
+        margin-top: 60px;
+        padding: 10px 14px 7px !important;
+    }
+
+    .savings-insights-heading-content {
+        gap: 10px !important;
+    }
+
+    .savings-insights-heading-icon {
+        width: 38px !important;
+        height: 38px !important;
+        min-width: 38px;
+    }
+
+    .savings-insights-heading-icon i {
+        font-size: 16px !important;
+    }
+
+    .savings-insights-heading-text h4 {
+        font-size: 19px;
+        margin-bottom: 3px;
+    }
+
+    .savings-insights-heading-text p {
+        font-size: 10px;
+        line-height: 1.3 !important;
+        max-width: 210px;
+    }
+
+    .savings-insights-heading-image {
+        margin-left: 5px;
+    }
+
+    .savings-insights-heading-image img {
+        width: 48px !important;
+        max-width: 48px;
+    }
+}
+
+@media (max-width: 380px) {
+    .savings-insights-heading {
+        margin-top: 60px;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+
+    .savings-insights-heading-content {
+        gap: 10px !important;
+    }
+
+    .savings-insights-heading-icon {
+        width: 35px !important;
+        height: 35px !important;
+        min-width: 35px;
+    }
+
+    .savings-insights-heading-icon i {
+        font-size: 15px !important;
+    }
+
+    .savings-insights-heading-text h4 {
+        font-size: 17px;
+    }
+
+    .savings-insights-heading-text p {
+        font-size: 9px;
+        max-width: 180px;
+    }
+
+    .savings-insights-heading-image img {
+        width: 42px !important;
+        max-width: 42px;
+    }
+}

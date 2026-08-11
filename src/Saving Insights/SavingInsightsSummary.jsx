@@ -1,17 +1,18 @@
 import React from "react";
+import './SavingInsightsSummary.css'
 
 export default function SavingInsightsSummary({averageMonthlySavings,savings,thisMonthSavings,lastMonthSaving
   ,growth,growthPrefix}) {
   return (
-    <div className="container-fluid mt-4">
+    <div className="container-fluid mt- 4 saving-insights-summary">
       <div className="row g-3">
 
         {/* This Month Saved */}
         <div className="col-4">
-          <div className="bg-white border rounded-4 shadow-sm p-3">
-            <div className="d-flex align-items-center gap-3">
+          <div className="bg-white border rounded-4 shadow-sm p-3 saving-summary-card">
+            <div className="d-flex align-items-center gap-3 saving-summary-content">
               <div
-                className="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                className="aving-summary-icon rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
                 style={{
                   width: "66px",
                   height: "66px",
@@ -22,7 +23,7 @@ export default function SavingInsightsSummary({averageMonthlySavings,savings,thi
                 <i className="bi bi-graph-up-arrow fs-3"></i>
               </div>
 
-              <div>
+              <div  className="saving-summary-text">
                 <div className="d-flex align-items-center gap-2 mb-1">
                   <span className="text-secondary fw-semibold">
                     This Month Saved
@@ -53,10 +54,10 @@ export default function SavingInsightsSummary({averageMonthlySavings,savings,thi
 
         {/* Last Month Saved */}
         <div className="col-4">
-          <div className="bg-white border rounded-4 shadow-sm p-3">
-            <div className="d-flex align-items-center gap-3">
+          <div className="bg-white border rounded-4 shadow-sm p-3 saving-summary-card">
+            <div className="d-flex align-items-center gap-3 saving-summary-content">
               <div
-                className="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                className="saving-summary-icon rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
                 style={{
                   width: "66px",
                   height: "66px",
@@ -67,7 +68,7 @@ export default function SavingInsightsSummary({averageMonthlySavings,savings,thi
                 <i className="bi bi-calendar3 fs-3"></i>
               </div>
 
-              <div>
+              <div className="saving-summary-text">
                 <div className="d-flex align-items-center gap-2 mb-1">
                   <span className="text-secondary fw-semibold">
                     Last Month Saved
@@ -83,21 +84,17 @@ export default function SavingInsightsSummary({averageMonthlySavings,savings,thi
                   ₹{Number(lastMonthSaving).toLocaleString("en-IN")}
                 </h3>
               </div>
-
             </div>
-
           </div>
         </div>
 
 
         {/* Average Monthly Saving */}
         <div className="col-4">
-          <div className="bg-white border rounded-4 shadow-sm p-3">
-
-            <div className="d-flex align-items-center gap-3">
-
+          <div className="bg-white border rounded-4 shadow-sm p-3 saving-summary-card">
+            <div className="d-flex align-items-center gap-3 saving-summary-content">
               <div
-                className="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                className="saving-summary-icon rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
                 style={{
                   width: "66px",
                   height: "66px",
@@ -108,7 +105,7 @@ export default function SavingInsightsSummary({averageMonthlySavings,savings,thi
                 <i className="bi bi-bar-chart-fill fs-3"></i>
               </div>
 
-              <div>
+              <div className="saving-summary-text">
                 <div className="d-flex align-items-center gap-2 mb-1">
                   <span className="text-secondary fw-semibold">
                     Avg. Monthly Saving

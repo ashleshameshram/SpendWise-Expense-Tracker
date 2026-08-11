@@ -1,4 +1,5 @@
 import React from "react";
+import './SavingCompletedGoals.css';
 
 export default function SavingCompletedGoals({ savings, completedGoals }) {
   const completedGoalsWithDate = completedGoals.map((goal) => {
@@ -25,33 +26,32 @@ export default function SavingCompletedGoals({ savings, completedGoals }) {
   });
 
   const goalIcons = {
-        "Emergency Fund": "bi bi-shield-check",
-        "Vacation": "bi bi-airplane",
-        "Technology": "bi bi-laptop-fill",
-        "Vehicle": "bi bi-car-front",
-        "Family Support": "bi bi-people",
-        "Health & Medical": "bi bi-heart-pulse",
-        "Shopping": "bi bi-bag",
-        "Festivals & gift": "bi bi-gift",
-        "Business/Side Hustle": "bi bi-briefcase",
-        "Home": "bi bi-house-door",
-        "Education": "bi bi-mortarboard",
-        "Investment": "bi bi-graph-up-arrow",
-        "Retirement": "bi bi-piggy-bank",
-        "Wedding": "bi bi-heart",
-        "Other": "bi bi-bookmark-fill"
-    };
+    "Emergency Fund": "bi bi-shield-check",
+    "Vacation": "bi bi-airplane",
+    "Technology": "bi bi-laptop-fill",
+    "Vehicle": "bi bi-car-front",
+    "Family Support": "bi bi-people",
+    "Health & Medical": "bi bi-heart-pulse",
+    "Shopping": "bi bi-bag",
+    "Festivals & gift": "bi bi-gift",
+    "Business/Side Hustle": "bi bi-briefcase",
+    "Home": "bi bi-house-door",
+    "Education": "bi bi-mortarboard",
+    "Investment": "bi bi-graph-up-arrow",
+    "Retirement": "bi bi-piggy-bank",
+    "Wedding": "bi bi-heart",
+    "Other": "bi bi-bookmark-fill"
+  };
 
   return (
-    <div className="container-fluid mt-4 ">
-      <div className="bg-white border rounded-4 shadow-sm overflow-hidden">
+    <div className="container-fluid mt-4 completed-goals-container">
+      <div className="bg-white border rounded-4 shadow-sm overflow-hidden completed-goals-card">
 
         {/* Header */}
-        <div className="px-4 py-3 border-bottom">
+        <div className="px-4 py-3 border-bottom completed-goals-header">
           <div className="row align-items-center">
-
             <div className="col">
-              <div className="d-flex align-items-center gap-3">
+              <div className="d-flex align-items-center gap-3 completed-goals-title">
                 <i
                   className="bi bi-trophy-fill fs-4"
                   style={{ color: "#4f46e5" }}
@@ -73,7 +73,7 @@ export default function SavingCompletedGoals({ savings, completedGoals }) {
 
         {/* Completed Goals */}
         {completedGoalsWithDate.length === 0 ? (
-          <div className="py-5 text-center">
+          <div className="py-5 text-center completed-goals-empty">
             <i
               className="bi bi-trophy fs-1"
               style={{ color: "#d2d9f7" }}
@@ -88,13 +88,16 @@ export default function SavingCompletedGoals({ savings, completedGoals }) {
             </p>
           </div>
         ) : (
-        completedGoalsWithDate.map((goal) => (
-            <div key={goal.id} className="row align-items-center py-3 ps-4 border-bottom ">
+          completedGoalsWithDate.map((goal) => (
+            <div
+              key={goal.id}
+              className="row align-items-center py-3 ps-4 border-bottom completed-goal-row"
+            >
 
               {/* Icon */}
-              <div className="col-auto">
+              <div className="col-auto completed-goal-icon-column">
                 <div
-                  className="rounded-circle d-flex align-items-center justify-content-center"
+                  className="rounded-circle d-flex align-items-center justify-content-center completed-goal-icon"
                   style={{
                     width: "50px",
                     height: "50px",
@@ -102,24 +105,26 @@ export default function SavingCompletedGoals({ savings, completedGoals }) {
                     color: "#4f46e5",
                   }}
                 >
-                  <i className={`${goalIcons[goal.goalType] || "bi bi-trophy-fill"} fs-3`}></i>
+                  <i
+                    className={`${goalIcons[goal.goalType] || "bi bi-trophy-fill"} fs-3`}
+                  ></i>
                 </div>
               </div>
 
               {/* Goal Name */}
-              <div className="col-md-4 col-lg-4">
+              <div className="col-md-4 col-lg-4 completed-goal-name">
                 <div className="fw-semibold">
                   {goal.goalName}
                 </div>
 
-                <div className="text-secondary small text-truncate">
+                <div className="text-secondary small text-truncate completed-goal-note">
                   {goal.note}
                 </div>
               </div>
 
               {/* Target */}
-              <div className="col-6 col-md-2">
-                <div className="text-secondary  mb-1">
+              <div className="col-6 col-md-2 completed-goal-detail">
+                <div className="text-secondary mb-1">
                   Target Amount
                 </div>
 
@@ -129,12 +134,12 @@ export default function SavingCompletedGoals({ savings, completedGoals }) {
               </div>
 
               {/* Completed Date */}
-              <div className="col-6 col-md-2">
-                <div className="text-secondary  mb-1">
+              <div className="col-6 col-md-2 completed-goal-detail">
+                <div className="text-secondary mb-1">
                   Completed On
                 </div>
 
-                <div className="fw-semibold ">
+                <div className="fw-semibold">
                   {goal.completedDate
                     ? new Date(goal.completedDate).toLocaleDateString(
                         "en-IN",
@@ -149,9 +154,9 @@ export default function SavingCompletedGoals({ savings, completedGoals }) {
               </div>
 
               {/* Status */}
-              <div className="col-md-3">
+              <div className="col-md-3 completed-goal-status">
                 <span
-                  className="badge rounded-3 px-3 py-2"
+                  className="badge rounded-3 px-3 py-2 completed-badge"
                   style={{
                     backgroundColor: "#eaf7ed",
                     color: "#198754",
@@ -163,18 +168,18 @@ export default function SavingCompletedGoals({ savings, completedGoals }) {
                 </span>
 
                 <div
-                  className="small fw-semibold mt-1"
+                  className="small fw-semibold mt-1 completed-saved"
                   style={{ color: "#198754" }}
                 >
                   You saved ₹
                   {Number(goal.savedAmount).toLocaleString("en-IN")}
                 </div>
               </div>
+
             </div>
-        ))
-      )}
+          ))
+        )}
       </div>
     </div>
   );
 }
-

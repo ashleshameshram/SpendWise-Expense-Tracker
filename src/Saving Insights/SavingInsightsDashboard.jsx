@@ -1,10 +1,11 @@
 import React from "react";
+import './SavingInsightsDashboard.css'
 
-export default function SavingInsights({growthPrefix,growth,goals,nextGoal,
+export default function SavingInsightsDashboard({growthPrefix,growth,goals,nextGoal,
     totalSaved,completedGoals,activeGoals}) {
   return (
-    <div className="container-fluid mt-2">
-      <div className="row g-3">
+    <div className="container-fluid mt-2 saving-insights-dashboard">
+      <div className="row g-3"> 
 
         {/* Total Saved */}
         <div className="col-3">

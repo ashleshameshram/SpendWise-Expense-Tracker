@@ -1,0 +1,455 @@
+.savings-analytics-container {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.savings-analytics-card {
+    width: 100%;
+}
+
+.savings-analytics-header {
+    min-height: 50px;
+}
+
+.savings-analytics-header h4 {
+    font-size: 24px;
+}
+
+.savings-by-goal-title {
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.savings-analytics-row {
+    min-height: 260px;
+}
+
+.savings-chart-column {
+    height: 250px;
+}
+
+.savings-chart-wrapper {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 30px;
+}
+
+.savings-chart {
+    width: 100%;
+    max-width: 280px;
+    height: 230px;
+    position: relative;
+}
+
+.savings-chart-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    pointer-events: none;
+    width: 100px;
+}
+
+.savings-chart-center-label {
+    font-size: 13px;
+    line-height: 1.2;
+}
+
+.savings-chart-center-amount {
+    font-size: 17px;
+    line-height: 1.3;
+}
+
+.savings-goal-details-column {
+    margin-left: auto;
+    padding-right: 70px;
+}
+
+.savings-goal-details {
+    width: 100%;
+}
+
+.savings-goal-item {
+    min-width: 260px;
+}
+
+.savings-goal-name {
+    min-width: 170px;
+    font-size: 16px;
+}
+
+.savings-goal-dot {
+    width: 13px;
+    height: 13px;
+    min-width: 13px;
+}
+
+.savings-goal-value {
+    font-size: 16px;
+    min-width: 80px;
+}
+
+.savings-goal-value .small {
+    font-size: 13px;
+}
+
+
+/* ============================= */
+/* 1024px LAPTOP */
+/* ============================= */
+
+@media (max-width: 1199px) and (min-width: 769px) {
+
+    .savings-analytics-container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .savings-analytics-header {
+        padding-left: 18px !important;
+    }
+
+    .savings-analytics-header h4 {
+        font-size: 20px;
+    }
+
+    .savings-by-goal-title {
+        font-size: 17px;
+    }
+
+    .savings-analytics-row {
+        min-height: 220px;
+    }
+
+    .savings-chart-column {
+        height: 215px;
+    }
+
+    .savings-chart-wrapper {
+        height: 215px;
+        padding: 12px 20px;
+    }
+
+    .savings-chart {
+        max-width: 230px;
+        height: 205px;
+    }
+
+    .savings-chart-center {
+        width: 85px;
+    }
+
+    .savings-chart-center-label {
+        font-size: 10px;
+    }
+
+    .savings-chart-center-amount {
+        font-size: 14px;
+    }
+
+    .savings-goal-details-column {
+        padding-right: 30px;
+    }
+
+    .savings-goal-item {
+        min-width: 210px;
+    }
+
+    .savings-goal-name {
+        min-width: 125px;
+        font-size: 12px;
+    }
+
+    .savings-goal-dot {
+        width: 9px;
+        height: 9px;
+        min-width: 9px;
+    }
+
+    .savings-goal-value {
+        font-size: 12px;
+        min-width: 65px;
+    }
+
+    .savings-goal-value .small {
+        font-size: 10px;
+    }
+}
+
+
+/* ============================= */
+/* TABLET */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    .savings-analytics-container {
+        margin-top: 14px !important;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .savings-analytics-card {
+        border-radius: 14px !important;
+    }
+
+    .savings-analytics-header {
+        min-height: 40px;
+        padding: 6px 14px !important;
+        gap: 8px !important;
+    }
+
+    .savings-analytics-header i {
+        font-size: 18px !important;
+    }
+
+    .savings-analytics-header h4 {
+        font-size: 16px;
+    }
+
+    .savings-by-goal-title {
+        font-size: 13px;
+        padding-left: 14px !important;
+        padding-top: 8px !important;
+    }
+
+    .savings-analytics-row {
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .savings-chart-column {
+        width: 100%;
+        height: 175px;
+        padding: 0 !important;
+    }
+
+    .savings-chart-wrapper {
+        width: 100%;
+        height: 175px;
+        padding: 12px 25px 16px;
+    }
+
+    .savings-chart {
+        width: 170px;
+        max-width: 170px;
+        height: 165px;
+    }
+
+    .savings-chart-center {
+        width: 70px;
+    }
+
+    .savings-chart-center-label {
+        font-size: 8px;
+    }
+
+    .savings-chart-center-amount {
+        font-size: 11px;
+    }
+
+    .savings-goal-details-column {
+        width: 100%;
+        padding: 5px 14px 15px !important;
+        margin-left: 0;
+    }
+
+    .savings-goal-details {
+        gap: 8px !important;
+        width: 100%;
+    }
+
+    .savings-goal-item {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .savings-goal-name {
+        min-width: 0;
+        font-size: 11px;
+    }
+
+    .savings-goal-dot {
+        width: 8px;
+        height: 8px;
+        min-width: 8px;
+    }
+
+    .savings-goal-value {
+        font-size: 11px;
+        min-width: 55px;
+    }
+
+    .savings-goal-value .small {
+        font-size: 9px;
+    }
+}
+
+
+/* ============================= */
+/* SMALL MOBILE */
+/* ============================= */
+
+@media (max-width: 576px) {
+
+    .savings-analytics-container {
+        margin-top: 12px !important;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .savings-analytics-header {
+        min-height: 36px;
+        padding: 5px 12px !important;
+    }
+
+    .savings-analytics-header i {
+        font-size: 16px !important;
+    }
+
+    .savings-analytics-header h4 {
+        font-size: 14px;
+    }
+
+    .savings-by-goal-title {
+        font-size: 11px;
+        padding-left: 12px !important;
+        padding-top: 7px !important;
+    }
+
+    .savings-chart-column {
+        height: 160px;
+    }
+
+    .savings-chart-wrapper {
+        height: 160px;
+        padding: 8px 20px 12px;
+    }
+
+    .savings-chart {
+        width: 145px;
+        max-width: 145px;
+        height: 150px;
+    }
+
+    .savings-chart-center {
+        width: 60px;
+    }
+
+    .savings-chart-center-label {
+        font-size: 7px;
+    }
+
+    .savings-chart-center-amount {
+        font-size: 10px;
+    }
+
+    .savings-goal-details-column {
+        padding: 4px 12px 12px !important;
+    }
+
+    .savings-goal-details {
+        gap: 7px !important;
+    }
+
+    .savings-goal-name {
+        font-size: 10px;
+    }
+
+    .savings-goal-dot {
+        width: 7px;
+        height: 7px;
+        min-width: 7px;
+    }
+
+    .savings-goal-value {
+        font-size: 10px;
+    }
+
+    .savings-goal-value .small {
+        font-size: 8px;
+    }
+}
+
+
+/* ============================= */
+/* VERY SMALL PHONE */
+/* ============================= */
+
+@media (max-width: 390px) {
+
+    .savings-analytics-container {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+    .savings-analytics-header {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    .savings-analytics-header h4 {
+        font-size: 12px;
+    }
+
+    .savings-analytics-header i {
+        font-size: 14px !important;
+    }
+
+    .savings-by-goal-title {
+        font-size: 10px;
+        padding-left: 10px !important;
+    }
+
+    .savings-chart-column {
+        height: 145px;
+    }
+
+    .savings-chart-wrapper {
+        height: 145px;
+        padding: 6px 15px 10px;
+    }
+
+    .savings-chart {
+        width: 125px;
+        max-width: 125px;
+        height: 135px;
+    }
+
+    .savings-chart-center {
+        width: 52px;
+    }
+
+    .savings-chart-center-label {
+        font-size: 6px;
+    }
+
+    .savings-chart-center-amount {
+        font-size: 9px;
+    }
+
+    .savings-goal-details-column {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        padding-bottom: 10px !important;
+    }
+
+    .savings-goal-name {
+        font-size: 9px;
+    }
+
+    .savings-goal-value {
+        font-size: 9px;
+    }
+
+    .savings-goal-value .small {
+        font-size: 7px;
+    }
+}
