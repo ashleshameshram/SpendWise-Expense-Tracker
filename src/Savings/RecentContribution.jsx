@@ -47,21 +47,21 @@ export default function RecentContribution({ goals, savings,deleteSaving }) {
     }
 
     return (
-        <div className="shadow-lg rounded-4 p-4 bg-white">
+        <div className="shadow-lg rounded-4 p-4 bg-white rc-card">
             {/* Header */}
-            <div className="d-flex justify-content-between align-items-center mb-3">
-                <h4 className="fw-bold mb-0">
+            <div className="d-flex justify-content-between align-items-center mb-3 rc-header">
+                <h4 className="fw-bold mb-0 rc-title">
                     Recent Contributions
                 </h4>
 
-                <small className="text-muted fw-semibold">
+                <small className="text-muted fw-semibold rc-count">
                     {savings.length} Contributions
                 </small>
             </div>
 
             <div className="contribution-list">
                 {savings.length === 0 ? (
-                    <p className="text-center py-4 fs-5 fw-semibold" style={{color:"#001463"}}>
+                    <p className="text-center py-4 fs-5 fw-semibold rc-empty" style={{color:"#001463"}}>
                         <i className="bi bi-piggy-bank me-2"></i>
                         No contributions Yet. Add your first saving contribution.
                     </p>
@@ -75,28 +75,28 @@ export default function RecentContribution({ goals, savings,deleteSaving }) {
 
                         return (
                             <div key={saving.id}
-                            className={`py-3 ${index !== savings.length - 1 ? "border-bottom" : "" }`}>
+                            className={`py-3 rc-item ${index !== savings.length - 1 ? "border-bottom" : "" }`}>
 
                                 <div className="d-flex align-items-center">
                                     {/* Icon */}
-                                    <div className="rounded-circle d-flex justify-content-center align-items-center"
+                                    <div className="rounded-circle d-flex justify-content-center align-items-center rc-icon"
                                         style={{width: "48px",height: "48px",minWidth: "48px",
                                             backgroundColor: bgColor}}>
-                                        <i className={icon}
+                                        <i className={icon + " rc-icon-i"}
                                             style={{fontSize: "25px"}}>
                                         </i>
                                     </div>
 
                                     {/* Details */}
-                                    <div className="ms-3 flex-grow-1">
-                                        <div className="d-flex justify-content-between align-items-center">
-                                            <div>
-                                                <div className='d-flex'>
-                                                    <h6 className="fw-semibold mb-1">
+                                    <div className="ms-3 flex-grow-1 rc-details">
+                                        <div className="d-flex justify-content-between align-items-center rc-top-row">
+                                            <div className="rc-left">
+                                                <div className='d-flex rc-name-date-row'>
+                                                    <h6 className="fw-semibold mb-1 rc-name">
                                                         {goal.goalName}
                                                     </h6>
                                                     {/* Date */}
-                                                    <small className="text-muted ms-2" style={{fontSize:"13px"}}>
+                                                    <small className="text-muted ms-2 rc-date" style={{fontSize:"13px"}}>
                                                         <i className="bi bi-calendar3 me-1"></i>
                                                         {new Date(saving.date).toLocaleDateString("en-GB", {
                                                             day: "numeric",
@@ -105,26 +105,26 @@ export default function RecentContribution({ goals, savings,deleteSaving }) {
                                                         })}
                                                     </small>
                                                 </div>    
-                                                <div className="d-flex align-items-center flex-wrap gap-2 mt-2">
+                                                <div className="d-flex align-items-center flex-wrap gap-2 mt-2 rc-badges">
                                                     
 
                                                     {/* Goal Type */}
-                                                    <span className="badge rounded-pill px-2 py-1"
+                                                    <span className="badge rounded-pill px-2 py-1 rc-badge-type"
                                                     style={{backgroundColor: bgColor,color: "#333",fontWeight: "500"}}>
                                                         {goal.goalType}
                                                     </span>
 
                                                     {/* Saving Method */}
-                                                    <span className="badge rounded-pill px-2 py-1"
+                                                    <span className="badge rounded-pill px-2 py-1 rc-badge-method"
                                                         style={{backgroundColor: "#dce9ff",color: "#1a237e",fontWeight: "500"}}>
                                                         {saving.method}
                                                     </span>
                                                 </div>
                                             </div>
 
-                                            <div className="text-end">
+                                            <div className="text-end rc-right">
                                                 <div className="d-flex align-items-center">
-                                                    <span className="fw-semibold text-success"
+                                                    <span className="fw-semibold text-success rc-amount"
                                                     style={{fontSize: "17px"}}>
                                                         +₹
                                                         {Number(
@@ -134,7 +134,7 @@ export default function RecentContribution({ goals, savings,deleteSaving }) {
                                                         )}
                                                     </span>
 
-                                                    <button className="btn btn-sm p-0 ms-2"
+                                                    <button className="btn btn-sm p-0 ms-2 rc-delete"
                                                     onClick={() => handleDeleteClick(saving.id)}>
                                                         <i className="bi bi-trash3 text-danger"
                                                         style={{fontSize: "15px"}}></i>

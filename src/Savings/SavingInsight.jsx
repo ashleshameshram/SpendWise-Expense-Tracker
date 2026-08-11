@@ -1,4 +1,5 @@
 import React from 'react'
+import './SavingInsight.css'
 
 export default function SavingInsight({ savings,goals, growth, totalSaved, thisMonthSaving }) {
     //growth msg
@@ -73,7 +74,7 @@ export default function SavingInsight({ savings,goals, growth, totalSaved, thisM
     }
 
     return (
-        <div className='rounded-4 p-3 me-3'
+        <div className='rounded-4 p-3 me-3 quick-insights-card  '
         style={{backgroundColor: "#fbe8fd",border: "1px solid #f0f0f5"}}>
             {/* Header */}
             <div className="d-flex align-items-center mb-3">
@@ -95,7 +96,7 @@ export default function SavingInsight({ savings,goals, growth, totalSaved, thisM
             style={{backgroundColor: "#fff"}}>
                 <i className="bi bi-stars me-2 mt-1"
                 style={{color: "#FFD700"}}></i>
-                <p className="mb-0" style={{fontSize: "16px",lineHeight: "1.4"}}>
+                <p className="mb-0 quick-insight-text" style={{fontSize: "16px",lineHeight: "1.4"}}>
                     {insightMessage}
                 </p>
             </div>
@@ -106,7 +107,7 @@ export default function SavingInsight({ savings,goals, growth, totalSaved, thisM
             style={{backgroundColor: "#fff"}}>
                 <i className="bi bi-stars me-2 mt-1"
                 style={{color: "#FFD700"}}></i>
-                <p className="mb-0" style={{fontSize: "16px",lineHeight: "1.4"}}>
+                <p className="mb-0 quick-insight-text" style={{fontSize: "16px",lineHeight: "1.4"}}>
                     {savingMessage}
                 </p>
             </div>
@@ -117,7 +118,7 @@ export default function SavingInsight({ savings,goals, growth, totalSaved, thisM
             style={{backgroundColor: "#fff"}}>
                 <i className="bi bi-stars me-2 mt-1"
                 style={{color: "#FFD700"}}></i>
-                <p className="mb-0" style={{fontSize: "16px",lineHeight: "1.4"}}>
+                <p className="mb-0 quick-insight-text" style={{fontSize: "16px",lineHeight: "1.4"}}>
                     {goalMesssage}
                 </p>
             </div>

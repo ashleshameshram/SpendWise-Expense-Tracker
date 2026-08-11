@@ -46,26 +46,26 @@ export default function SavingsGoal({goals,savings,deleteGoal}) {
     };
 
     return (
-        <div className="shadow-lg rounded-4 p-4 bg-white">
-            <div className='d-flex justify-content-between mb-3'>
+        <div className="shadow-lg rounded-4 p-4 bg-white sg-card">
+            <div className='d-flex justify-content-between mb-3 sg-header'>
                 {/* header */}
-                <h4 className="fw-bold mb-0">
+                <h4 className="fw-bold mb-0 sg-title">
                     Active Savings Goals
                 </h4>
-                <small className="text-muted fw-semibold">
+                <small className="text-muted fw-semibold sg-count">
                     {goals.length} Goals
                 </small>
             </div>
 
             <div className='goals-list'>
                 {goals.length === 0 ? (
-                    <p className="text-center py-4 fs-5 fw-semibold" style={{color:"#001463"}}>
+                    <p className="text-center py-4 fs-5 fw-semibold sg-empty" style={{color:"#001463"}}>
                         <i className="bi bi-bullseye me-2"></i>
                          All your savings goals are completed!
-                        <p className="text-secondary mb-3">
+                        <p className="text-secondary mb-3 sg-empty-sub">
                             Amazing work! View your completed goals in Savings Insights.
                         </p>
-                        <button className="btn btn-primary rounded-3"
+                        <button className="btn btn-primary rounded-3 sg-empty-btn"
                         onClick={() => navigate("/savings-insights-page")}>
                             View Completed Goals
                             <i className="bi bi-arrow-right ms-2"></i>
@@ -91,40 +91,40 @@ export default function SavingsGoal({goals,savings,deleteGoal}) {
 
                         return(       
                             <div key={goal.id} 
-                            className={`py-3 ${index !== goals.length - 1 ? "border-bottom" : ""}`}>
+                            className={`py-3 sg-goal-item ${index !== goals.length - 1 ? "border-bottom" : ""}`}>
                             <div className="d-flex align-items-center">
                                 {/* Goal Icon */}
-                                <div className="rounded-circle d-flex justify-content-center align-items-center"
+                                <div className="rounded-circle d-flex justify-content-center align-items-center sg-goal-icon"
                                     style={{width: "48px",height: "48px",
                                         minWidth: "48px",backgroundColor: bgColor}}>
-                                    <i className={icon} style={{ fontSize: "23px" }}></i>
+                                    <i className={icon + " sg-goal-icon-i"} style={{ fontSize: "23px" }}></i>
                                 </div>
 
                                 {/* Goal Details */}
-                                <div className="ms-3 flex-grow-1">
+                                <div className="ms-3 flex-grow-1 sg-goal-details">
                                     {/* Top Row */}
-                                    <div className="d-flex justify-content-between align-items-start">
-                                        <div className="me-3">
-                                            <h6 className="fw-semibold mb-1">
+                                    <div className="d-flex justify-content-between align-items-start sg-goal-top-row">
+                                        <div className="me-3 sg-goal-left">
+                                            <h6 className="fw-semibold mb-1 sg-goal-name">
                                                 {goal.goalName}
                                             </h6>
-                                            <small className="text-primary fw-semibold"
+                                            <small className="text-primary fw-semibold sg-goal-target"
                                             style={{ fontSize: "13px" }}>
                                                 Target:₹{Number(goal.targetAmount).toLocaleString("en-IN")}
                                             </small>
                                         </div>
 
-                                        <div className="text-end">
+                                        <div className="text-end sg-goal-right">
                                             <div className="d-flex align-items-center justify-content-end">
-                                                <span className="fw-bold"
+                                                <span className="fw-bold sg-goal-amount"
                                                     style={{fontSize: "17px",color: "#198754"}}>
                                                     ₹{currentAmount.toLocaleString("en-IN")}
                                                 </span>
-                                                <small className="text-muted fst-italic ms-1"
+                                                <small className="text-muted fst-italic ms-1 sg-goal-saved-label"
                                                 style={{ fontSize: "12px" }}>
                                                     saved
                                                 </small>
-                                                <button className="btn btn-sm p-0 ms-2"
+                                                <button className="btn btn-sm p-0 ms-2 sg-goal-delete"
                                                 onClick={() =>deleteGoal(goal.id)}>
                                                 <i className="bi bi-trash3 text-danger"
                                                 style={{ fontSize: "15px" }}>
@@ -132,7 +132,7 @@ export default function SavingsGoal({goals,savings,deleteGoal}) {
                                                 </button>
                                             </div>
 
-                                            <small style={{color: isGoalCompleted ? "#198754" : "#05743d",
+                                            <small className="sg-goal-remaining" style={{color: isGoalCompleted ? "#198754" : "#05743d",
                                             fontWeight: "500",fontSize: "12px"}}>
                                                 {isGoalCompleted ? (
                                                     <>
@@ -153,7 +153,7 @@ export default function SavingsGoal({goals,savings,deleteGoal}) {
                                     </div>
 
                                     {/* Progress */}
-                                    <div className="mt-3">
+                                    <div className="mt-3 sg-goal-progress-wrap">
                                         <div className="progress rounded-pill" style={{ height: "8px" }}>
                                             <div className="progress-bar progress-bar-striped progress-bar-animated"
                                                 style={{width: `${Math.min(progress, 100)}%`,

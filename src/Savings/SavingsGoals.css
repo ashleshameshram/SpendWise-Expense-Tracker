@@ -1,24 +1,217 @@
-.goals-list{
-    max-height: 300px;
-    overflow-y: auto;
-    padding-right: 6px;
+@media (min-width: 768px) and (max-width: 991px) {
+    .sg-card {
+        padding: 20px !important;
+    }
+    .sg-title {
+        font-size: 19px;
+    }
+    .sg-count {
+        font-size: 13px;
+    }
+    .sg-empty {
+        font-size: 16px;
+    }
+    .sg-empty-sub {
+        font-size: 14px;
+    }
+    .sg-empty-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    .sg-goal-icon {
+        width: 42px !important;
+        height: 42px !important;
+        min-width: 42px !important;
+    }
+    .sg-goal-icon-i {
+        font-size: 19px !important;
+    }
+    .sg-goal-name {
+        font-size: 15px;
+    }
+    .sg-goal-target {
+        font-size: 12px !important;
+    }
+    .sg-goal-amount {
+        font-size: 15px !important;
+    }
 }
-
-.goals-list::-webkit-scrollbar{
-    width:5px;
+ 
+/* LARGE PHONES (480px - 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+    .sg-card {
+        padding: 16px !important;
+    }
+    .sg-title {
+        font-size: 17px;
+    }
+    .sg-count {
+        font-size: 12px;
+    }
+    .sg-empty {
+        font-size: 14px;
+        padding-top: 24px !important;
+        padding-bottom: 24px !important;
+    }
+    .sg-empty i {
+        font-size: 20px;
+    }
+    .sg-empty-sub {
+        font-size: 13px;
+    }
+    .sg-empty-btn {
+        font-size: 13px;
+        padding: 7px 14px;
+    }
+    .sg-goal-icon {
+        width: 40px !important;
+        height: 40px !important;
+        min-width: 40px !important;
+    }
+    .sg-goal-icon-i {
+        font-size: 17px !important;
+    }
+    .sg-goal-details {
+        margin-left: 10px !important;
+    }
+    .sg-goal-name {
+        font-size: 14px;
+    }
+    .sg-goal-target {
+        font-size: 11px !important;
+    }
+    .sg-goal-amount {
+        font-size: 14px !important;
+    }
+    .sg-goal-saved-label {
+        font-size: 10px !important;
+    }
+    .sg-goal-remaining {
+        font-size: 10.5px !important;
+    }
+    .sg-goal-delete i {
+        font-size: 13px !important;
+    }
 }
-
-.goals-list::-webkit-scrollbar-track{
-    background:#f1f1f1;
-    border-radius:10px;
+ 
+/* MEDIUM/SMALL PHONES (300px - 479px) */
+@media (min-width: 300px) and (max-width: 479px) {
+    .sg-card {
+        padding: 12px !important;
+    }
+    .sg-title {
+        font-size: 15px;
+    }
+    .sg-count {
+        font-size: 11px;
+    }
+    .sg-empty {
+        font-size: 13px;
+        padding-top: 18px !important;
+        padding-bottom: 18px !important;
+    }
+    .sg-empty i {
+        font-size: 18px;
+    }
+    .sg-empty-sub {
+        font-size: 12px;
+    }
+    .sg-empty-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+    .sg-goal-icon {
+        width: 36px !important;
+        height: 36px !important;
+        min-width: 36px !important;
+    }
+    .sg-goal-icon-i {
+        font-size: 15px !important;
+    }
+    .sg-goal-details {
+        margin-left: 8px !important;
+    }
+    .sg-goal-name {
+        font-size: 12.5px;
+    }
+    .sg-goal-target {
+        font-size: 10px !important;
+    }
+    .sg-goal-amount {
+        font-size: 12.5px !important;
+    }
+    .sg-goal-saved-label {
+        font-size: 9px !important;
+    }
+    .sg-goal-remaining {
+        font-size: 9.5px !important;
+    }
+    .sg-goal-delete i {
+        font-size: 12px !important;
+    }
 }
-
-.goals-list::-webkit-scrollbar-thumb{
-    margin-left: 10px;
-    background:#004951;
-    border-radius:10px; 
-}
-
-.goals-list::-webkit-scrollbar-thumb:hover{
-    background:rgb(7, 0, 64);
+ 
+/* VERY SMALL SCREENS (below 300px) */
+@media (max-width: 299px) {
+    .sg-card {
+        padding: 10px !important;
+    }
+    .sg-title {
+        font-size: 13px;
+    }
+    .sg-count {
+        font-size: 10px;
+    }
+    .sg-empty {
+        font-size: 12px;
+        padding-top: 14px !important;
+        padding-bottom: 14px !important;
+    }
+    .sg-empty-sub {
+        font-size: 11px;
+    }
+    .sg-empty-btn {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+    .sg-goal-top-row {
+        flex-wrap: wrap;
+        row-gap: 6px;
+    }
+    .sg-goal-right {
+        text-align: left !important;
+        width: 100%;
+    }
+    .sg-goal-right .d-flex {
+        justify-content: flex-start !important;
+    }
+    .sg-goal-icon {
+        width: 32px !important;
+        height: 32px !important;
+        min-width: 32px !important;
+    }
+    .sg-goal-icon-i {
+        font-size: 13px !important;
+    }
+    .sg-goal-details {
+        margin-left: 6px !important;
+    }
+    .sg-goal-name {
+        font-size: 11.5px;
+    }
+    .sg-goal-target {
+        font-size: 9px !important;
+    }
+    .sg-goal-amount {
+        font-size: 11.5px !important;
+    }
+    .sg-goal-saved-label {
+        font-size: 8.5px !important;
+    }
+    .sg-goal-remaining {
+        font-size: 9px !important;
+    }
+    .sg-goal-delete i {
+        font-size: 11px !important;
+    }
 }

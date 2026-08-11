@@ -12,11 +12,11 @@ export default function DisplaySavings({goals,savings,deleteGoal,deleteSaving}) 
 
     return(
        <div className="container py-3">
-            <div className="row">
-                <div className="col-6 ">
+            <div className="row gy-4">
+                <div className="col-12 col-lg-6">
                     <SavingsGoal goals={activeGoals} savings={savings} deleteGoal={deleteGoal}/>
                 </div>
-                <div className='col-6'>
+                <div className='col-12 col-lg-6'>
                     <RecentContribution goals={goals} savings={savings} deleteGoal={deleteGoal}
                     deleteSaving={deleteSaving}/>
                 </div>

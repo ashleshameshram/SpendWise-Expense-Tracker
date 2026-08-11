@@ -51,7 +51,7 @@ export default function SavingsMessage({progress,completedGoals,activeGoals,hand
         progressMessage = "🌱 Start saving today and take the first step towards your goal.";
     }
     return(
-        <div className="p-3 rounded-4 d-flex align-items-center justify-content-between saving-message"
+        <div className="p-2 px-4 rounded-4 d-flex align-items-center justify-content-between saving-message"
         style={{backgroundColor: "#fcdaff",border: "1px solid black"}}>
             <div className='d-flex justify-content-center align-items-center saving-message-content'>
                 <div className="rounded-circle d-flex justify-content-center align-items-center me-3  saving-message-icon"
