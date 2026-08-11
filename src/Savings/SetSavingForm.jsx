@@ -111,7 +111,7 @@ export default function SetSavingForm({goals,savings, addSavings}) {
                         Goal
                     </label>
 
-                    <select className={`form-control ${errors.goalId ? "is-invalid" : '' }`}
+                    <select className={`form-select custom-select ${errors.goalId ? "is-invalid" : '' }`}
                     name="goalId" value={savingForm.goalId} onChange={handleSavingChange}>
                         <option value="">Select Goal</option>
                         {goals.map((goal) => (

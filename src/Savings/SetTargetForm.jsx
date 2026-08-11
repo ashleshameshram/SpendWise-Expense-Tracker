@@ -87,7 +87,7 @@ export default function SetTargetForm({addGoals}) {
                     <label className="form-label fw-semibold">
                         Goal Type
                     </label>
-                    <select className={`form-control ${errors.goalType ? "is-invalid" : '' }`}
+                    <select className={`form-select custom-select ${errors.goalType ? "is-invalid" : '' }`}
                     name="goalType" value={targetForm.goalType} onChange={handleTargetChange}>
                         <option value="">Select Goal</option>
                         <option>Emergency Fund</option>

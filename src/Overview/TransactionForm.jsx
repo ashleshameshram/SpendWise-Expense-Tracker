@@ -94,7 +94,7 @@ export default function TransactonForm({transactions,onAdd, onUpdate, editForm, 
                     <label htmlFor="category" className="form-label">
                         Category
                     </label>
-                    <select className={`form-select ${errors.category ? 'is-invalid' : ''}`} name="category" id="category" 
+                    <select className={`form-select custom-select ${errors.category ? 'is-invalid' : ''}`} name="category" id="category" 
                     value={formData.category} onChange={handleChange} >
                         <option disabled value="">Choose Category</option>
                         <option value="Food">Food</option>
@@ -123,7 +123,7 @@ export default function TransactonForm({transactions,onAdd, onUpdate, editForm, 
                     <label htmlFor="type" className="form-label">
                         Type
                     </label>
-                    <select className={`form-select ${errors.type ? 'is-invalid' : ''}`} id="type" value={formData.type}
+                    <select className={`form-select custom-select ${errors.type ? 'is-invalid' : ''}`} id="type" value={formData.type}
                     onChange={handleChange} name="type">
                         <option value="" disabled>Choose Type</option>
                         <option value="Expense">Expense</option>
