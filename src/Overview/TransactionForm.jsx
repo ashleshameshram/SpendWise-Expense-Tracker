@@ -91,8 +91,10 @@ export default function TransactonForm({transactions,onAdd, onUpdate, editForm, 
 
             <div className="row">
                 <div className='col'>
-                    <label htmlFor="category" className="form-label">Category</label>
-                    <select className={`form-control ${errors.category ? 'is-invalid' : ''}`} name="category" id="category" 
+                    <label htmlFor="category" className="form-label">
+                        Category
+                    </label>
+                    <select className={`form-select ${errors.category ? 'is-invalid' : ''}`} name="category" id="category" 
                     value={formData.category} onChange={handleChange} >
                         <option disabled value="">Choose Category</option>
                         <option value="Food">Food</option>
@@ -112,18 +114,24 @@ export default function TransactonForm({transactions,onAdd, onUpdate, editForm, 
                         <option value="Pets">Pets</option>
                         <option value="Other">Other</option>
                     </select>
-                    {errors.category && <div className='invalid-feedback'>{errors.category}</div>}
+                    {errors.category && (
+                        <div className='invalid-feedback'>{errors.category}</div>
+                    )}
                 </div>
 
                 <div className='col'>
-                    <label htmlFor="type" className="form-label">Type</label>
-                    <select className={`form-control ${errors.type ? 'is-invalid' : ''}`} id="type" value={formData.type}
+                    <label htmlFor="type" className="form-label">
+                        Type
+                    </label>
+                    <select className={`form-select ${errors.type ? 'is-invalid' : ''}`} id="type" value={formData.type}
                     onChange={handleChange} name="type">
                         <option value="" disabled>Choose Type</option>
                         <option value="Expense">Expense</option>
                         <option value="Income">Income</option>
                     </select>
-                    {errors.type && <div className='invalid-feedback'>{errors.type}</div>}
+                    {errors.type && (
+                        <div className='invalid-feedback'>{errors.type}</div>
+                    )}
                 </div>
             </div>
 
