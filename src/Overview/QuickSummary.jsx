@@ -23,7 +23,7 @@ export default function QuickSummary({transactions}) {
         );
     });
     let totalMonthSpending = monthTransactions.reduce((total,transaction) => {
-        return total + Number(transaction.amount)
+        return total + Number(transaction.amount);
     },0);
 
     //last month long
@@ -32,7 +32,7 @@ export default function QuickSummary({transactions}) {
     const lastMonthLong = lastMonthDate.toLocaleString("en-GB", {month: "long"});
     
     //Last Month Spending
-    const lastMonth = currentMonth - 1;
+    let lastMonth = currentMonth - 1;
     if(lastMonth === 0){
         lastMonth = 12;
     }
