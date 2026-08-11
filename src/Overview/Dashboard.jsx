@@ -18,7 +18,7 @@ export default function Dashboard({ savings,income, expense, balance }) {
             </h6>
 
             <div className="d-flex align-items-center">
-              <i className="fa-solid fa-indian-rupee-sign me-2 card-amount-icon" style={{ fontSize: "22px" }}></i>
+              <i className="fa-solid fa-indian-rupee-sign me-2 card-amount-icon" style={{ fontSize: "26px" }}></i>
               <h4 className="fw-bold mb-0">
                 {balance.toLocaleString("en-IN")}
               </h4>
