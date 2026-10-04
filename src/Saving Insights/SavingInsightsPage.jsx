@@ -1,10 +1,11 @@
-import React from 'react';
+import React,{ lazy, Suspense } from 'react';
 import SavingInsightsHeading from './SavingInsightsHeading';
 import SavingInsightsDashboard from './SavingInsightsDashboard';
-import SavingInsightsAnalytics from './SavingInsightsAnalytics';
 import SavingInsightsSummary from './SavingInsightsSummary';
 import SavingCompletedGoals from './SavingCompletedGoals';
 import SavingInsightsFooter from './SavingInsightsFooter';
+
+const SavingInsightsAnalytics = lazy(() => import('./SavingInsightsAnalytics'));
 
 export default function SavingsInsightsPage({ goals, savings }) {
     //total saved savings
@@ -131,8 +132,13 @@ export default function SavingsInsightsPage({ goals, savings }) {
             growth={growth} goals={goals} totalSaved={totalSaved}
             completedGoals={completedGoals} activeGoals={activeGoals}/>
 
-            <SavingInsightsAnalytics monthlyData={monthlyData} 
-            goals={goals} savings={savings}/>
+            <Suspense fallback={
+                <div className="text-center p-4" style={{ minHeight: "300px" }}>
+                    Loading chart...
+                </div>}>
+                    <SavingInsightsAnalytics monthlyData={monthlyData} 
+                    goals={goals} savings={savings}/>
+            </Suspense>
 
             <SavingInsightsSummary  savings={savings} averageMonthlySavings={averageMonthlySavings}
             thisMonthSavings={thisMonthSavings} lastMonthSaving={lastMonthSaving}
