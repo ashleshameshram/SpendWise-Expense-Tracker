@@ -1,5 +1,5 @@
 import React from "react";
-import {Pie,PieChart,Cell,Tooltip,Legend,ResponsiveContainer} from "recharts";
+import {Pie,PieChart,Cell,Tooltip,Legend} from "recharts";
 import MonthlySummary from "./MonthlySummary";
 import './ExpenseAnalysis.css'
 
