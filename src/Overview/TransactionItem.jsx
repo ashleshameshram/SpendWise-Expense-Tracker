@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function TransactionItem({transaction,onDelete,onEdit}) {
     const categoryIcons = {
         food: "fa-utensils",

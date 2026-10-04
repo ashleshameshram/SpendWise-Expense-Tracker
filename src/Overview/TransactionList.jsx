@@ -1,4 +1,3 @@
-import React from 'react'
 import TransactionItem from "./TransactionItem";
 
 export default function TransactionList({transactions, onDelete, onEdit}) {

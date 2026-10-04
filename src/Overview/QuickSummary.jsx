@@ -1,4 +1,3 @@
-import React from 'react'
 import './QuickSummary.css'
 
 export default function QuickSummary({transactions}) {

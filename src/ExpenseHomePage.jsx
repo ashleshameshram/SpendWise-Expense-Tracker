@@ -1,16 +1,13 @@
-import { useState, useEffect} from 'react'
-import TransactonForm from './Overview/TransactionForm.jsx'
-import RecentTransaction from './Overview/RecentTransaction.jsx'
-import ExpenseAnalysis from './Analysis/ExpenseAnalysis.jsx'
+import { useState, useEffect, lazy, Suspense} from 'react'
 import { Routes, Route } from "react-router-dom";
 import './ExpenseHomePage.css'
 
 import Sidebar from './Common/Sidebar.jsx'
 import Overview from "./Overview/Overview.jsx";
-import Analysis from "./Analysis/Analysis.jsx";
 import Savings from "./Savings/Savings.jsx";
-import SavingInsightsPage from './Saving Insights/SavingInsightsPage.jsx';
 
+const Analysis = lazy(() => import("./Analysis/Analysis.jsx"));
+const SavingInsightsPage = lazy(() => import('./Saving Insights/SavingInsightsPage.jsx'));
 
 export default function ExpenseHomePage({userName}) {
     const [editingId, setEditingId] = useState(null);
@@ -90,6 +87,10 @@ export default function ExpenseHomePage({userName}) {
         <div className="layout">
             <Sidebar />
             <main className="main-content">
+                <Suspense fallback={
+                    <div className="text-center p-5" style={{ minHeight: "300px" }}>
+                        Loading...
+                    </div>}>
                 <Routes>
                     <Route path="/" element={
                         <Overview
@@ -107,22 +108,29 @@ export default function ExpenseHomePage({userName}) {
                         userName={userName}
                         />
                     }/>
+                
 
-                    <Route path="/analysis" element={<Analysis transactions={transactions} />} />
+                    <Route path="/analysis" element={
+                        <Analysis transactions={transactions} />
+                    }/>
 
-                    <Route path="/savings" element={<Savings 
-                        savings={savings} 
-                        setSavings={setSavings}
-                        goals={goals}
-                        setGoals={setGoals}
-                    />} />
-
-                    <Route path="/savings-insights-page" element={<SavingInsightsPage 
-                        goals={goals} 
-                        savings={savings} 
+                    <Route path="/savings" element={
+                        <Savings 
+                            savings={savings} 
+                            setSavings={setSavings}
+                            goals={goals}
+                            setGoals={setGoals}
+                        />} 
                     />
+
+                    <Route path="/savings-insights-page" element={
+                        <SavingInsightsPage 
+                            goals={goals} 
+                            savings={savings} 
+                        />
                     }/>
                 </Routes>
+                </Suspense>
             </main>
         </div>
 );

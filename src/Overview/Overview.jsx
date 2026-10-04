@@ -1,4 +1,3 @@
-import React from "react";
 import Heading from "../Common/Heading";
 import Dashboard from "./Dashboard";
 import TransactionForm from "./TransactionForm";

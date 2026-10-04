@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function SearchTransaction({search,setSearch,category,setCategory,sort,setSort}){
     return (
         <>
